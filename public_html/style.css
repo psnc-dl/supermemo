@@ -1,0 +1,12 @@
+.gameboard {
+    position: relative;
+    top: 50px;
+    left: 350px;
+    right: 350px;
+}
+
+.card {
+    background-color: greenyellow;
+    margin: 5px;
+    border: 3px solid black;
+}
