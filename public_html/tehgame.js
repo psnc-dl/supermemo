@@ -1,12 +1,16 @@
 var main = function() {
 
     var images = ["images/kitten1.jpg", "images/kitten1.jpg", "images/kitten2.jpg", 
-        "images/kitten2.jpg", "images/kitten3.jpg", "images/kitten3.jpg"];
+        "images/kitten2.jpg", "images/kitten3.jpg", "images/kitten3.jpg", 
+        "images/kitten4.jpg", "images/kitten4.jpg", "images/kitten5.jpg", 
+        "images/kitten5.jpg", "images/kitten6.jpg", "images/kitten6.jpg"];
     var clickCount = 0;
     var points = 0;
     var matchCard = [];
     var matchIndex = 0;
-    var cardCount = 6;
+    var cardCount = 12;
+    var boardWidth = 4;
+    var boardHeight = 3;
 
     var randomize = function() {
         var x = Math.floor(Math.random() * cardCount);
@@ -19,6 +23,27 @@ var main = function() {
     for (i = 0; i < 7; i++) {
         randomize();
     }
+    
+    $("#gameboard").css({"width": boardWidth * 220, "height": boardHeight * 200});
+    
+    var creator = function() {
+               
+        var card = document.createElement("div");
+        card.setAttribute("class", "card");
+       
+        var image = document.createElement("img");
+        image.setAttribute("id", "card" + (i + 1).toString());
+        image.setAttribute("class", "covered");
+        image.setAttribute("src", " ");
+        image.setAttribute("alt", "img");
+        
+        document.getElementById("gameboard").appendChild(card);
+        card.appendChild(image);
+    };
+    
+    for(i = 0; i < cardCount; i++) {
+        creator();
+    };
     
     for (i = 0; i < cardCount; i++) {
         document.getElementById("card" + (i + 1).toString()).src = images[i];
@@ -33,6 +58,7 @@ var main = function() {
         
         ++clickCount;
         $(test).text(clickCount);
+        
         var matchId = event.target.id; 
         matchCard[matchIndex] = matchId;
         $(test1).text(matchCard);
@@ -43,8 +69,10 @@ var main = function() {
             if ( document.getElementById(matchCard[0]).src === document.getElementById(matchCard[1]).src ) {
                 ++points;
                 $(test2).text(points);
+                
                 document.getElementById(matchCard[0]).className = "";
                 document.getElementById(matchCard[1]).className = "";
+                
                 if (points === 3) { $(test3).text("GZ you won!!!") ;}
             } else {
                 setTimeout(function() { 
@@ -60,7 +88,6 @@ var main = function() {
             matchCard.splice(0, 2);
             matchIndex = 0;
         }
-        
     });
     
 };

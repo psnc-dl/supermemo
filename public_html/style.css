@@ -4,13 +4,11 @@ body, html {
     padding: 0;
 }
 
-.gameboard {
+#gameboard {
     position: relative;
     top: 75px;
     margin-left: auto;
     margin-right: auto;
-    width: 660px;
-    height: 400px;
 }
 
 .column {
@@ -20,20 +18,22 @@ body, html {
 }
 
 .card {
+    position: relative;
     background-color: greenyellow;
     margin: 5px;
     border: 3px solid black;
     width: 200px;
     height: 200px;
+    float: left;
 }
 
 img {
     display: block;
+    position: absolute;
     width: 200px;
     height: 200px;    
-    float: left;
 }
 
 .covered {
-    
+    opacity: 0;
 }
