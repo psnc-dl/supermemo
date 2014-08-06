@@ -13,24 +13,31 @@
                 <form>
                     Podaj swoje imię:<input type="text" id="name"><br>
                 </form>
-                <button type="button" id="5yo" onclick="ageSelect()">0 - 5 lat</button>
-                <button type="button" id="6yo" onclick="ageSelect()">6 - 8 lat</button>
-                <button type="button" id="8yo" onclick="ageSelect()">8+ lat</button>
+                <button type="button" id="5yo" onclick="ageSelect(id)">0 - 5 lat</button>
+                <button type="button" id="6yo" onclick="ageSelect(id)">6 - 8 lat</button>
+                <button type="button" id="8yo" onclick="ageSelect(id)">8+ lat</button>
         </div>
         
         <div id="result"></div>
         
         <script>
-            var ageSelect = function() {
-                if (document.getElementById("5yo")) {
-                    sessionStorage.setItem("username", document.getElementById('name').value);
-                    location = 'five.html';
-                } else if (document.getElementById("6yo")) {
-                    sessionStorage.setItem("username", document.getElementById('name').value);
-                    location='eight.html';
-                } else if (document.getElementById("8yo")) {
-                    sessionStorage.setItem("username", document.getElementById('name').value);
-                    location='over_eight.html';
+            var ageSelect = function(id) {
+                switch(id) {
+                    case "5yo" : 
+                        document.getElementById("5yo");
+                        sessionStorage.setItem("username", document.getElementById('name').value);
+                        location = 'five.html';
+                        break;
+                    case "6yo" :
+                        document.getElementById("6yo");
+                        sessionStorage.setItem("username", document.getElementById('name').value);
+                        location='eight.html';
+                        break;
+                    case "8yo" :
+                        document.getElementById("8yo");
+                        sessionStorage.setItem("username", document.getElementById('name').value);
+                        location='over_eight.html';
+                        break;
                 }
             };
         </script>

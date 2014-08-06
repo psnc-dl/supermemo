@@ -1,9 +1,17 @@
 var main = function() {
-
-    var images = ["images/kitten1.jpg", "images/kitten1.jpg", "images/kitten2.jpg", 
+    
+    if (sessionStorage.getItem("category") === "kittens") {
+        var images = ["images/kitten1.jpg", "images/kitten1.jpg", "images/kitten2.jpg", 
         "images/kitten2.jpg", "images/kitten3.jpg", "images/kitten3.jpg", 
         "images/kitten4.jpg", "images/kitten4.jpg", "images/kitten5.jpg", 
         "images/kitten5.jpg", "images/kitten6.jpg", "images/kitten6.jpg"];
+    } else if (sessionStorage.getItem("category") === "misc") {
+        var images = ["misc_img/1.jpg", "misc_img/1.jpg", "misc_img/2.jpg", 
+        "misc_img/2.jpg", "misc_img/3.jpg", "misc_img/3.jpg", 
+        "misc_img/4.jpg", "misc_img/4.jpg", "misc_img/5.jpg", 
+        "misc_img/5.jpg", "misc_img/6.jpg", "misc_img/6.jpg"];
+    };
+    
     var clickCount = 0;
     var points = 0;
     var matchCard = [];
@@ -57,15 +65,15 @@ var main = function() {
     $(".card").click( function(event) {
         
         ++clickCount;
-        $(test).text(clickCount);
+        //$(test).text(clickCount);
         
         var matchId = event.target.id; 
         matchCard[matchIndex] = matchId;
-        $(test1).text(matchCard);
+        //$(test1).text(matchCard);
         
         if (clickCount === 2) {
             
-            $(test).text("Już 2");
+            //$(test).text("Już 2");
             if ( document.getElementById(matchCard[0]).src === document.getElementById(matchCard[1]).src ) {
                 ++points;
                 $(test2).text(points);
@@ -73,11 +81,14 @@ var main = function() {
                 document.getElementById(matchCard[0]).className = "";
                 document.getElementById(matchCard[1]).className = "";
                 
-                if (points === cardCount/2) { $(test3).text("GZ " + sessionStorage.getItem("username") + " you won!!!") ;}
+                if (points === cardCount/2) {
+                    alert("GZ " + sessionStorage.getItem("username") + " you won!!!");
+                    sessionStorage.clear();
+                }
             } else {
                 setTimeout(function() { 
                     $(".covered").css("opacity", "0");
-                    $(test).text(clickCount);
+                    //$(test).text(clickCount);
                 }, 800); 
             }
            clickCount = 0;
