@@ -20,7 +20,7 @@ var main = function() {
         images[images.length] = imgTemp[0];
     };
 
-    for (i = 0; i < 7; i++) {
+    for (i = 0; i < (((cardCount * 6) / 4 ) + 5 ); i++) {
         randomize();
     }
     
@@ -73,7 +73,7 @@ var main = function() {
                 document.getElementById(matchCard[0]).className = "";
                 document.getElementById(matchCard[1]).className = "";
                 
-                if (points === 3) { $(test3).text("GZ you won!!!") ;}
+                if (points === cardCount/2) { $(test3).text("GZ " + sessionStorage.getItem("username") + " you won!!!") ;}
             } else {
                 setTimeout(function() { 
                     $(".covered").css("opacity", "0");

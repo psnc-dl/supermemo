@@ -4,31 +4,33 @@
         <title>SuperMemo</title>
         <meta charset="UTF-8">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <div  class="header"><h1>SuperMemo</h1></div>
         <div class="log-in">
-            <div class="container">
                 <h2>Witaj!</h2>
                 <form>
                     Podaj swoje imię:<input type="text" id="name"><br>
-                    Podaj ile masz lat:<input type="text" id="age"><br>
                 </form>
-                <button type="button" onclick="ageCheck()">Dalej</button>
-            </div>
+                <button type="button" id="5yo" onclick="ageSelect()">0 - 5 lat</button>
+                <button type="button" id="6yo" onclick="ageSelect()">6 - 8 lat</button>
+                <button type="button" id="8yo" onclick="ageSelect()">8+ lat</button>
         </div>
         
+        <div id="result"></div>
+        
         <script>
-            var ageCheck = function() {
-                var x = document.getElementById("age").value;
-                if (x > 0 && x <= 5) {
-                    location="five.html";
-                } else if (x >= 6 && x <= 8) {
-                    location="eight.html";
-                } else if (x >= 9){
-                    location="over_eight.html";
+            var ageSelect = function() {
+                if (document.getElementById("5yo")) {
+                    sessionStorage.setItem("username", document.getElementById('name').value);
+                    location = 'five.html';
+                } else if (document.getElementById("6yo")) {
+                    sessionStorage.setItem("username", document.getElementById('name').value);
+                    location='eight.html';
+                } else if (document.getElementById("8yo")) {
+                    sessionStorage.setItem("username", document.getElementById('name').value);
+                    location='over_eight.html';
                 }
             };
         </script>
