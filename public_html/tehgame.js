@@ -1,25 +1,38 @@
 var main = function() {
     
-    if (sessionStorage.getItem("category") === "kittens") {
-        var images = ["images/kitten1.jpg", "images/kitten1.jpg", "images/kitten2.jpg", 
-        "images/kitten2.jpg", "images/kitten3.jpg", "images/kitten3.jpg", 
-        "images/kitten4.jpg", "images/kitten4.jpg", "images/kitten5.jpg", 
-        "images/kitten5.jpg", "images/kitten6.jpg", "images/kitten6.jpg"];
-    } else if (sessionStorage.getItem("category") === "misc") {
-        var images = ["misc_img/1.jpg", "misc_img/1.jpg", "misc_img/2.jpg", 
-        "misc_img/2.jpg", "misc_img/3.jpg", "misc_img/3.jpg", 
-        "misc_img/4.jpg", "misc_img/4.jpg", "misc_img/5.jpg", 
-        "misc_img/5.jpg", "misc_img/6.jpg", "misc_img/6.jpg"];
+    if (sessionStorage.getItem("age") === "five" && sessionStorage.getItem("category") === "kittens") {
+        var images = config.age.five.category.kittens.images;
+    } else if (sessionStorage.getItem("age") === "five" && sessionStorage.getItem("category") === "misc") {
+        var images = config.age.five.category.misc.images;
+    } else if (sessionStorage.getItem("age") === "eight" && sessionStorage.getItem("category") === "kittens") {
+        var images = config.age.eight.category.kittens.images;
+    } else if (sessionStorage.getItem("age") === "eight" && sessionStorage.getItem("category") === "misc") {
+        var images = config.age.eight.category.misc.images;
+    } else if (sessionStorage.getItem("age") === "overEight" && sessionStorage.getItem("category") === "kittens") {
+        var images = config.age.overEight.category.kittens.images;
+    } else if (sessionStorage.getItem("age") === "overEight" && sessionStorage.getItem("category") === "misc") {
+        var images = config.age.overEight.category.misc.images;
+    };
+
+    if (sessionStorage.getItem("age") === "five") {
+        var cardCount = config.size[0].cardCount;
+        var boardWidth = config.size[0].boardWidth;
+        var boardHeight = config.size[0].boardHeight;
+    } else if (sessionStorage.getItem("age") === "eight") {
+        var cardCount = config.size[1].cardCount;
+        var boardWidth = config.size[1].boardWidth;
+        var boardHeight = config.size[1].boardHeight;
+    } else if (sessionStorage.getItem("age") === "overEight") {
+        var cardCount = config.size[2].cardCount;
+        var boardWidth = config.size[2].boardWidth;
+        var boardHeight = config.size[2].boardHeight;
     };
     
     var clickCount = 0;
     var points = 0;
     var matchCard = [];
     var matchIndex = 0;
-    var cardCount = 12;
-    var boardWidth = 4;
-    var boardHeight = 3;
-
+    
     var randomize = function() {
         var x = Math.floor(Math.random() * cardCount);
         var imgTemp = [];
@@ -61,13 +74,18 @@ var main = function() {
         $("#card" + (i + 1).toString()).click(function() { $(this).css("opacity", "1"); });
     }
     
+    var sleep = function() {
+        ms = new Date().getTime();
+        while (new Date().getTime() < ms + 800){}
+    };
+    
 
     $(".card").click( function(event) {
         
         ++clickCount;
         //$(test).text(clickCount);
         
-        var matchId = event.target.id; 
+        var matchId = event.target.id;
         matchCard[matchIndex] = matchId;
         //$(test1).text(matchCard);
         
@@ -86,10 +104,10 @@ var main = function() {
                     sessionStorage.clear();
                 }
             } else {
-                setTimeout(function() { 
+                setTimeout(function() {
                     $(".covered").css("opacity", "0");
                     //$(test).text(clickCount);
-                }, 800); 
+                }, 800);
             }
            clickCount = 0;
         }

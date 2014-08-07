@@ -13,30 +13,31 @@
                 <form>
                     Podaj swoje imię:<input type="text" id="name"><br>
                 </form>
-                <button type="button" id="5yo" onclick="ageSelect(id)">0 - 5 lat</button>
-                <button type="button" id="6yo" onclick="ageSelect(id)">6 - 8 lat</button>
-                <button type="button" id="8yo" onclick="ageSelect(id)">8+ lat</button>
+                <button type="button" id="five" onclick="ageSelect(id)">0 - 5 lat</button>
+                <button type="button" id="eight" onclick="ageSelect(id)">6 - 8 lat</button>
+                <button type="button" id="overEight" onclick="ageSelect(id)">8+ lat</button>
         </div>
-        
-        <div id="result"></div>
         
         <script>
             var ageSelect = function(id) {
                 switch(id) {
-                    case "5yo" : 
-                        document.getElementById("5yo");
+                    case "five" : 
+                        document.getElementById("five");
                         sessionStorage.setItem("username", document.getElementById('name').value);
+                        sessionStorage.setItem("age", "five");
                         location = 'five.html';
                         break;
-                    case "6yo" :
-                        document.getElementById("6yo");
+                    case "eight" :
+                        document.getElementById("eight");
                         sessionStorage.setItem("username", document.getElementById('name').value);
-                        location='eight.html';
+                        sessionStorage.setItem("age", "eight");
+                        location = 'eight.html';
                         break;
-                    case "8yo" :
-                        document.getElementById("8yo");
+                    case "overEight" :
+                        document.getElementById("overEight");
                         sessionStorage.setItem("username", document.getElementById('name').value);
-                        location='over_eight.html';
+                        sessionStorage.setItem("age", "overEight");
+                        location = 'over_eight.html';
                         break;
                 }
             };
