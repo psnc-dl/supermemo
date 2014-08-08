@@ -13,7 +13,7 @@ var main = function() {
     } else if (sessionStorage.getItem("age") === "overEight" && sessionStorage.getItem("category") === "misc") {
         var images = config.age.overEight.category.misc.images;
     };
-
+    
     if (sessionStorage.getItem("age") === "five") {
         var cardCount = config.size[0].cardCount;
         var boardWidth = config.size[0].boardWidth;
@@ -29,7 +29,7 @@ var main = function() {
     };
     
     var clickCount = 0;
-    var points = 0;
+    var montyPointon = 0;
     var matchCard = [];
     var matchIndex = 0;
     
@@ -40,7 +40,7 @@ var main = function() {
         images.splice(x, 1);
         images[images.length] = imgTemp[0];
     };
-
+    
     for (i = 0; i < (((cardCount * 6) / 4 ) + 5 ); i++) {
         randomize();
     }
@@ -73,51 +73,65 @@ var main = function() {
     for (i = 0; i < cardCount; i++) {
         $("#card" + (i + 1).toString()).click(function() { $(this).css("opacity", "1"); });
     }
-    
-    var sleep = function() {
-        ms = new Date().getTime();
-        while (new Date().getTime() < ms + 800){}
+        
+    var cardClick = function() {
+        $(".card").click(function(event) {
+
+            //++clickCount;
+
+            var matchId = event.target.id;
+            if (matchId !== matchCard[0]){
+                matchCard[matchIndex] = matchId;
+                $(test1).text(matchCard);
+                ++clickCount;
+                $(test).text(clickCount);
+                matchIndex++;
+            } 
+            
+            if(matchCard[0] !== matchCard[1]) {
+                if (clickCount === 2 && matchCard.length === 2) {
+                    $(".card").css("pointer-events", "none");                
+                    $(test).text("Już 2");
+                    
+                    if (document.getElementById(matchCard[0]).src === document.getElementById(matchCard[1]).src) {
+
+                        ++montyPointon;
+                        $(test2).text(montyPointon);
+
+                        document.getElementById(matchCard[0]).className = "";
+                        document.getElementById(matchCard[1]).className = "";
+
+                        if (montyPointon === cardCount / 2) {
+                            alert("GZ " + sessionStorage.getItem("username") + " you won!!!");
+                            sessionStorage.clear();
+                        }
+                        $(".card").css("pointer-events", "auto");
+                    } else {              
+                        setTimeout(function() {
+                            $(".covered").css("opacity", "0");
+                            $(".card").css("pointer-events", "auto");
+                            $(test).text(clickCount);
+                        }, 800);
+                    }
+                   clickCount = 0;
+                }
+                //matchIndex++;
+                
+            } else {
+                matchCard.splice(0, 2);
+                matchIndex = 0;
+            }
+            
+            if (matchCard.length === 2) {
+                //$(".covered").css("opacity", "0");
+                matchCard.splice(0, 2);
+                matchIndex = 0;
+            }
+            
+        });
     };
     
-
-    $(".card").click( function(event) {
-        
-        ++clickCount;
-        //$(test).text(clickCount);
-        
-        var matchId = event.target.id;
-        matchCard[matchIndex] = matchId;
-        //$(test1).text(matchCard);
-        
-        if (clickCount === 2) {
-            
-            //$(test).text("Już 2");
-            if ( document.getElementById(matchCard[0]).src === document.getElementById(matchCard[1]).src ) {
-                ++points;
-                $(test2).text(points);
-                
-                document.getElementById(matchCard[0]).className = "";
-                document.getElementById(matchCard[1]).className = "";
-                
-                if (points === cardCount/2) {
-                    alert("GZ " + sessionStorage.getItem("username") + " you won!!!");
-                    sessionStorage.clear();
-                }
-            } else {
-                setTimeout(function() {
-                    $(".covered").css("opacity", "0");
-                    //$(test).text(clickCount);
-                }, 800);
-            }
-           clickCount = 0;
-        }
-        matchIndex++;
-        
-        if (matchCard.length === 2) {
-            matchCard.splice(0, 2);
-            matchIndex = 0;
-        }
-    });
+    cardClick();
     
 };
 
