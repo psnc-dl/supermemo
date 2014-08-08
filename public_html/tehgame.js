@@ -77,29 +77,27 @@ var main = function() {
     var cardClick = function() {
         $(".card").click(function(event) {
 
-            //++clickCount;
-
             var matchId = event.target.id;
-            if (matchId !== matchCard[0]){
+            if (matchId !== matchCard[0] && $("#"+matchId).attr("class") !== "uncovered"){
                 matchCard[matchIndex] = matchId;
-                $(test1).text(matchCard);
+                //$(test1).text(matchCard);
                 ++clickCount;
-                $(test).text(clickCount);
+                //$(test).text(clickCount);
                 matchIndex++;
-            } 
+            }
             
             if(matchCard[0] !== matchCard[1]) {
                 if (clickCount === 2 && matchCard.length === 2) {
                     $(".card").css("pointer-events", "none");                
-                    $(test).text("Już 2");
+                    //$(test).text("Już 2");
                     
                     if (document.getElementById(matchCard[0]).src === document.getElementById(matchCard[1]).src) {
 
                         ++montyPointon;
                         $(test2).text(montyPointon);
 
-                        document.getElementById(matchCard[0]).className = "";
-                        document.getElementById(matchCard[1]).className = "";
+                        document.getElementById(matchCard[0]).className = "uncovered";
+                        document.getElementById(matchCard[1]).className = "uncovered";
 
                         if (montyPointon === cardCount / 2) {
                             alert("GZ " + sessionStorage.getItem("username") + " you won!!!");
@@ -110,12 +108,11 @@ var main = function() {
                         setTimeout(function() {
                             $(".covered").css("opacity", "0");
                             $(".card").css("pointer-events", "auto");
-                            $(test).text(clickCount);
+                            //$(test).text(clickCount);
                         }, 800);
                     }
-                   clickCount = 0;
+                    clickCount = 0;
                 }
-                //matchIndex++;
                 
             } else {
                 matchCard.splice(0, 2);
@@ -123,7 +120,6 @@ var main = function() {
             }
             
             if (matchCard.length === 2) {
-                //$(".covered").css("opacity", "0");
                 matchCard.splice(0, 2);
                 matchIndex = 0;
             }
