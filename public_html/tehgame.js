@@ -1,19 +1,5 @@
 var main = function() {
     
-    if (sessionStorage.getItem("age") === "five" && sessionStorage.getItem("category") === "kittens") {
-        var images = config.age.five.category.kittens.images;
-    } else if (sessionStorage.getItem("age") === "five" && sessionStorage.getItem("category") === "misc") {
-        var images = config.age.five.category.misc.images;
-    } else if (sessionStorage.getItem("age") === "eight" && sessionStorage.getItem("category") === "kittens") {
-        var images = config.age.eight.category.kittens.images;
-    } else if (sessionStorage.getItem("age") === "eight" && sessionStorage.getItem("category") === "misc") {
-        var images = config.age.eight.category.misc.images;
-    } else if (sessionStorage.getItem("age") === "overEight" && sessionStorage.getItem("category") === "kittens") {
-        var images = config.age.overEight.category.kittens.images;
-    } else if (sessionStorage.getItem("age") === "overEight" && sessionStorage.getItem("category") === "misc") {
-        var images = config.age.overEight.category.misc.images;
-    };
-    
     if (sessionStorage.getItem("age") === "five") {
         var cardCount = config.size[0].cardCount;
         var boardWidth = config.size[0].boardWidth;
@@ -26,7 +12,25 @@ var main = function() {
         var cardCount = config.size[2].cardCount;
         var boardWidth = config.size[2].boardWidth;
         var boardHeight = config.size[2].boardHeight;
-    };
+    }
+    
+    var images = [];
+    if (sessionStorage.getItem("age") === "five") {
+        var categoryName = category[sessionStorage.getItem("category")];
+        for (i = 0; i < cardCount; i++) {
+            images[i] = categoryName.images[i];
+        }
+    } else if (sessionStorage.getItem("age") === "eight") {
+        var categoryName = category[sessionStorage.getItem("category")];
+        for (i = 0; i < cardCount; i++) {
+            images[i] = categoryName.images[i];
+        }
+    } else if (sessionStorage.getItem("age") === "overEight") {
+        var categoryName = category[sessionStorage.getItem("category")];
+        for (i = 0; i < cardCount; i++) {
+            images[i] = categoryName.images[i];
+        }
+    }
     
     var clickCount = 0;
     var montyPointon = 0;
@@ -45,7 +49,7 @@ var main = function() {
         randomize();
     }
     
-    $("#gameboard").css({"width": boardWidth * 220, "height": boardHeight * 200});
+    $("#gameboard").css({"width": boardWidth * 175, "height": boardHeight * 155});
     
     var creator = function() {
                
@@ -64,7 +68,7 @@ var main = function() {
     
     for(i = 0; i < cardCount; i++) {
         creator();
-    };
+    }
     
     for (i = 0; i < cardCount; i++) {
         document.getElementById("card" + (i + 1).toString()).src = images[i];
@@ -100,8 +104,12 @@ var main = function() {
                         document.getElementById(matchCard[1]).className = "uncovered";
 
                         if (montyPointon === cardCount / 2) {
-                            alert("GZ " + sessionStorage.getItem("username") + " you won!!!");
+                            alert("GZ " + sessionStorage.getItem("username") + 
+                            " you won!!! Za 5 sekund zostaniesz przeniesiony/a na nastepną stronę. Teraz możesz podziwiać.");
                             sessionStorage.clear();
+                            setTimeout(function() {
+                                location = "end_game.html";
+                            }, 5000);
                         }
                         $(".card").css("pointer-events", "auto");
                     } else {              

@@ -7,25 +7,31 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <div>for children from 6 to 8 years old<br>
-            <button type="button" id = "kittens" onclick="categorySelection(id)">Kotki</button>
-            <button type="button" id = "misc" onclick="categorySelection(id)">Różne</button>
+        <div id="buttons">for children from 6 to 8 years old<br>
+            
         </div>
+        
+        <script src="config.js"></script>
         <script>
-            var categorySelection = function(id) {
-                
-                switch (id) {
-                    case "kittens":
-                        sessionStorage.setItem("category", "kittens");
-                        location="the_game.html";
-                        break;
-                        
-                    case "misc" :
-                        sessionStorage.setItem("category", "misc");
-                        location="the_game.html";
-                        break;
-                }
+            var buttonCreator = function(id) {
+                var btn = document.createElement("button");
+                var t = document.createTextNode(id);
+                var categorySelection = function(id) {
+                    sessionStorage.setItem("category", id);
+                    location = "the_game.html";
+                };
+                btn.setAttribute("type", "button");
+                btn.setAttribute("id", id);
+                btn.setAttribute("onclick", "sessionStorage.setItem('category', id); location = 'the_game.html';");
+                                
+                document.getElementById("buttons").appendChild(btn);
+                btn.appendChild(t);
             };
+            
+            var id;
+            for (id in category) {
+               buttonCreator(id); 
+            }
         </script>
     </body>
 </html>
