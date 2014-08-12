@@ -1,21 +1,32 @@
 var config = {
-    "size": [
-        {
-            "cardCount": 12,
-            "boardWidth": 4,
-            "boardHeight": 3
-        },
-        {
-            "cardCount": 16,
-            "boardWidth": 4,
-            "boardHeight": 4
-        },
-        {
-            "cardCount": 24,
-            "boardWidth": 6,
-            "boardHeight": 4
-        }
-    ]
+    "five": {
+        "ageRange": "0 - 5 lat",
+        "cardCount": 12,
+        "boardWidth": 4,
+        "boardHeight": 3,
+        "cardSize": 155
+    },
+    "nine": {
+        "ageRange": "6 - 9 lat",
+        "cardCount": 16,
+        "boardWidth": 4,
+        "boardHeight": 4,
+        "cardSize": 155
+    },
+    "overNine": {
+        "ageRange": "10+ lat",
+        "cardCount": 24,
+        "boardWidth": 6,
+        "boardHeight": 4,
+        "cardSize": 155
+    },
+    "hundread": {
+        "ageRange": "100 lat",
+        "cardCount": 2,
+        "boardWidth": 2,
+        "boardHeight": 1,
+        "cardSize": 155
+    }
 };
         
 var category = {

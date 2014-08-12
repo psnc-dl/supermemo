@@ -7,7 +7,7 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <div id="buttons">for childern 8 year old and older<br>
+        <div id="buttons">
             
         </div>
         
@@ -16,20 +16,14 @@
             var buttonCreator = function(id) {
                 var btn = document.createElement("button");
                 var t = document.createTextNode(id);
-                var categorySelection = function(id) {
-                    sessionStorage.setItem("category", id);
-                    location = "the_game.html";
-                };
                 btn.setAttribute("type", "button");
                 btn.setAttribute("id", id);
-                btn.setAttribute("onclick", "sessionStorage.setItem('category', id); location = 'the_game.html';");
-                                
+                btn.setAttribute("onclick", "sessionStorage.setItem('category', id); location = 'the_game.html';");                
                 document.getElementById("buttons").appendChild(btn);
                 btn.appendChild(t);
             };
             
-            var id;
-            for (id in category) {
+            for (var id in category) {
                buttonCreator(id); 
             }
         </script>

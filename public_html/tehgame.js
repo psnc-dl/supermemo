@@ -1,37 +1,15 @@
 var main = function() {
     
-    if (sessionStorage.getItem("age") === "five") {
-        var cardCount = config.size[0].cardCount;
-        var boardWidth = config.size[0].boardWidth;
-        var boardHeight = config.size[0].boardHeight;
-    } else if (sessionStorage.getItem("age") === "eight") {
-        var cardCount = config.size[1].cardCount;
-        var boardWidth = config.size[1].boardWidth;
-        var boardHeight = config.size[1].boardHeight;
-    } else if (sessionStorage.getItem("age") === "overEight") {
-        var cardCount = config.size[2].cardCount;
-        var boardWidth = config.size[2].boardWidth;
-        var boardHeight = config.size[2].boardHeight;
-    }
-    
+    var ageName = config[sessionStorage.getItem("age")];
+    var cardDim = config[sessionStorage.getItem("age")].cardSize;
+    var cardCount = ageName.cardCount;
+    var boardWidth = ageName.boardWidth;
+    var boardHeight = ageName.boardHeight;
     var images = [];
-    if (sessionStorage.getItem("age") === "five") {
-        var categoryName = category[sessionStorage.getItem("category")];
-        for (i = 0; i < cardCount; i++) {
-            images[i] = categoryName.images[i];
-        }
-    } else if (sessionStorage.getItem("age") === "eight") {
-        var categoryName = category[sessionStorage.getItem("category")];
-        for (i = 0; i < cardCount; i++) {
-            images[i] = categoryName.images[i];
-        }
-    } else if (sessionStorage.getItem("age") === "overEight") {
-        var categoryName = category[sessionStorage.getItem("category")];
-        for (i = 0; i < cardCount; i++) {
-            images[i] = categoryName.images[i];
-        }
+    var categoryName = category[sessionStorage.getItem("category")];
+    for (i = 0; i < cardCount; i++) {
+        images[i] = categoryName.images[i];
     }
-    
     var clickCount = 0;
     var montyPointon = 0;
     var matchCard = [];
@@ -49,7 +27,8 @@ var main = function() {
         randomize();
     }
     
-    $("#gameboard").css({"width": boardWidth * 175, "height": boardHeight * 155});
+    
+    $("#gameboard").css({"width": boardWidth * (cardDim + 15), "height": boardHeight * cardDim});
     
     var creator = function() {
                
@@ -77,7 +56,8 @@ var main = function() {
     for (i = 0; i < cardCount; i++) {
         $("#card" + (i + 1).toString()).click(function() { $(this).css("opacity", "1"); });
     }
-        
+    $(".card").css({"width": cardDim, "height": cardDim});
+    
     var cardClick = function() {
         $(".card").click(function(event) {
 

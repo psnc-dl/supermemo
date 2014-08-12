@@ -13,34 +13,27 @@
             <form>
                 Podaj swoje imię:<input type="text" id="name"><br>
             </form>
-            <button type="button" id="five" onclick="ageSelect(id)">0 - 5 lat</button>
-            <button type="button" id="eight" onclick="ageSelect(id)">6 - 9 lat</button>
-            <button type="button" id="overEight" onclick="ageSelect(id)">10+ lat</button>
+            <div id="buttons">
+                
+            </div>
         </div>
         
+        <script src="config.js"></script>
         <script>
-            var ageSelect = function(id) {
-                switch(id) {
-                    case "five" : 
-                        document.getElementById("five");
-                        sessionStorage.setItem("username", document.getElementById('name').value);
-                        sessionStorage.setItem("age", "five");
-                        location = 'five.html';
-                        break;
-                    case "eight" :
-                        document.getElementById("eight");
-                        sessionStorage.setItem("username", document.getElementById('name').value);
-                        sessionStorage.setItem("age", "eight");
-                        location = 'eight.html';
-                        break;
-                    case "overEight" :
-                        document.getElementById("overEight");
-                        sessionStorage.setItem("username", document.getElementById('name').value);
-                        sessionStorage.setItem("age", "overEight");
-                        location = 'over_eight.html';
-                        break;
-                }
+            var buttonCreator = function(id) {
+                var btn = document.createElement("button");
+                var rangeName = config[id];
+                var t = document.createTextNode(rangeName.ageRange);
+                btn.setAttribute("type", "button");
+                btn.setAttribute("id", id);
+                btn.setAttribute("onclick", "sessionStorage.setItem('age', id); location = 'category.html';");
+                document.getElementById("buttons").appendChild(btn);
+                btn.appendChild(t);                
             };
+            
+            for(var id in config) {
+                buttonCreator(id);
+            }
         </script>
     </body>
 </html>
