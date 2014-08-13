@@ -1,6 +1,6 @@
 var config = {
     "five": {
-        "ageRange": "0 - 5 lat",
+        "ageRange": "3 - 5 lat",
         "cardCount": 12,
         "boardWidth": 4,
         "boardHeight": 3,
@@ -19,33 +19,16 @@ var config = {
         "boardWidth": 6,
         "boardHeight": 4,
         "cardSize": 155
-    },
-    "hundread": {
-        "ageRange": "100 lat",
-        "cardCount": 2,
-        "boardWidth": 2,
-        "boardHeight": 1,
-        "cardSize": 155
     }
+};
+
+var ageCategories = {
+  "five": ["Atlas", "Ssaki", "Zioła"],
+  "nine": ["Inicjały", "Atlas", "Moda", "Ssaki", "Zioła"],
+  "overNine": ["Inicjały", "Atlas", "Moda", "Ssaki", "Zioła"]
 };
         
 var category = {
-    "Kotki": {
-        "images": [
-            "images/kitten1.jpg",
-            "images/kitten1.jpg",
-            "images/kitten2.jpg", 
-            "images/kitten2.jpg",
-            "images/kitten3.jpg",
-            "images/kitten3.jpg", 
-            "images/kitten4.jpg",
-            "images/kitten4.jpg",
-            "images/kitten5.jpg", 
-            "images/kitten5.jpg",
-            "images/kitten6.jpg",
-            "images/kitten6.jpg"
-        ]
-    },
     "Inicjały": {
         "images": [
             "literki/a_180.jpg",
@@ -74,21 +57,118 @@ var category = {
             "literki/s_180.jpg"                                                       
         ]
     },
-    
-    "Różne": {
+    "Atlas": {
         "images": [
-            "misc_img/1.jpg",
-            "misc_img/1.jpg",
-            "misc_img/2.jpg",
-            "misc_img/2.jpg",
-            "misc_img/3.jpg",
-            "misc_img/3.jpg",
-            "misc_img/4.jpg",
-            "misc_img/4.jpg",
-            "misc_img/5.jpg",
-            "misc_img/5.jpg",
-            "misc_img/6.jpg",
-            "misc_img/6.jpg"
+            "atlas155x155/atlas-009.png",
+            "atlas155x155/atlas-009.png",
+            "atlas155x155/atlas-010.png",
+            "atlas155x155/atlas-010.png",
+            "atlas155x155/atlas-012.png",
+            "atlas155x155/atlas-012.png",
+            "atlas155x155/atlas-014.png",
+            "atlas155x155/atlas-014.png",
+            "atlas155x155/atlas-016.png",
+            "atlas155x155/atlas-016.png",
+            "atlas155x155/atlas-020.png",
+            "atlas155x155/atlas-020.png",
+            "atlas155x155/atlas-022.png",
+            "atlas155x155/atlas-022.png",
+            "atlas155x155/atlas-024.png",
+            "atlas155x155/atlas-024.png",
+            "atlas155x155/atlas-026.png",
+            "atlas155x155/atlas-026.png",
+            "atlas155x155/atlas-028.png",
+            "atlas155x155/atlas-028.png",
+            "atlas155x155/atlas-030.png",
+            "atlas155x155/atlas-030.png",
+            "atlas155x155/atlas-032.png",
+            "atlas155x155/atlas-032.png"
+        ]
+    },
+    "Moda": {
+        "images": [
+            "mody155x155/01.png",
+            "mody155x155/01.png",
+            "mody155x155/02.png",
+            "mody155x155/02.png",
+            "mody155x155/03.png",
+            "mody155x155/03.png",
+            "mody155x155/04.png",
+            "mody155x155/04.png",
+            "mody155x155/05.png",
+            "mody155x155/05.png",
+            "mody155x155/08.png",
+            "mody155x155/08.png",
+            "mody155x155/09.png",
+            "mody155x155/09.png",
+            "mody155x155/11.png",
+            "mody155x155/11.png",
+            "mody155x155/12.png",
+            "mody155x155/12.png",
+            "mody155x155/13.png",
+            "mody155x155/13.png",
+            "mody155x155/14.png",
+            "mody155x155/14.png",
+            "mody155x155/15.png",
+            "mody155x155/15.png",
+            "mody155x155/16.png",
+            "mody155x155/16.png"
+        ]
+    },
+    "Ssaki": {
+        "images": [
+            "ssaki155x155/ssaki02-022.png",
+            "ssaki155x155/ssaki02-022.png",
+            "ssaki155x155/ssaki01-000.png",
+            "ssaki155x155/ssaki01-000.png",
+            "ssaki155x155/ssaki01-018.png",
+            "ssaki155x155/ssaki01-018.png",
+            "ssaki155x155/ssaki01-019.png",
+            "ssaki155x155/ssaki01-019.png",
+            "ssaki155x155/ssaki01-021.png",
+            "ssaki155x155/ssaki01-021.png",
+            "ssaki155x155/ssaki01-022.png",
+            "ssaki155x155/ssaki01-022.png",
+            "ssaki155x155/ssaki01-023.png",
+            "ssaki155x155/ssaki01-023.png",
+            "ssaki155x155/ssaki01-024.png",
+            "ssaki155x155/ssaki01-024.png",
+            "ssaki155x155/ssaki01-025.png",
+            "ssaki155x155/ssaki01-025.png",
+            "ssaki155x155/ssaki01-026.png",
+            "ssaki155x155/ssaki01-026.png",
+            "ssaki155x155/ssaki01-027.png",
+            "ssaki155x155/ssaki01-027.png",
+            "ssaki155x155/ssaki02-020.png",
+            "ssaki155x155/ssaki02-020.png"
+        ]
+    },
+    "Zioła": {
+        "images": [
+            "zioła155x155/zioła-006.png",
+            "zioła155x155/zioła-006.png",
+            "zioła155x155/zioła-007.png",
+            "zioła155x155/zioła-007.png",
+            "zioła155x155/zioła-008.png",
+            "zioła155x155/zioła-008.png",
+            "zioła155x155/zioła-009.png",
+            "zioła155x155/zioła-009.png",
+            "zioła155x155/zioła-010.png",
+            "zioła155x155/zioła-010.png",
+            "zioła155x155/zioła-011.png",
+            "zioła155x155/zioła-011.png",
+            "zioła155x155/zioła-012.png",
+            "zioła155x155/zioła-012.png",
+            "zioła155x155/zioła-013.png",
+            "zioła155x155/zioła-013.png",
+            "zioła155x155/zioła-015.png",
+            "zioła155x155/zioła-015.png",
+            "zioła155x155/zioła-016.png",
+            "zioła155x155/zioła-016.png",
+            "zioła155x155/zioła-017.png",
+            "zioła155x155/zioła-017.png",
+            "zioła155x155/zioła-018.png",
+            "zioła155x155/zioła-018.png"            
         ]
     }
 };           

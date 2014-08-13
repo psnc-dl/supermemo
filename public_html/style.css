@@ -1,33 +1,91 @@
 body, html {
     width: 100%;
-    margin: 0;
+    margin-top: 15px;
     padding: 0;
+    background-color: #CCD8DA;
+    font-family: 'Lato', sans-serif;
+}
+
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.log-in{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 14pt;
+}
+
+#buttons{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+.log-in #buttons {
+    display: inline-block;
+}
+
+#noName {
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+button {
+    margin: 10px;
+    margin-top: 30px;
+    width: 155px;
+    height: 155px;
+    background-color: #4A6BB2;
+    border: 0px;
+    border-radius: 8px;
+    font-size: 22pt;
+    font-weight: bold;
+}
+
+#scores {
+    margin-right: 80px;
+    float: right;
+    font-weight: bold;
+}
+
+#retry {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 155px;
+    background-color: #4A6BB2;
+    border: 0px;
+    border-radius: 8px;
+    font-size: 22pt;
+    font-weight: bold;
 }
 
 #gameboard {
     position: relative;
-    top: 75px;
+    top: 15%;
     margin-left: auto;
     margin-right: auto;
 }
 
-/*.column {
-    width: 200px;
-    float: left;
-    margin-left:10px;
-}*/
-
 .card {
     position: relative;
-    background-color: greenyellow;
+    background-color: #4A6BB2;
+    border-radius: 8px;
     margin: 5px;
-    /*border: 3px solid black;
-    width: 155px;
-    height: 155px;*/
     float: left;
 }
 
 img {
+    border-radius: 8px;
     display: block;
     position: absolute;
     width: 100%;

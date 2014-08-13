@@ -3,28 +3,36 @@
     <head>
         <title>SuperMemo</title>
         <meta charset="UTF-8">
+        <meta name="mobile-web-app-capable" content="yes">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
+        <div class="header"><h1>SuperMemo</h1></div>
         <div id="buttons">
             
         </div>
         
         <script src="config.js"></script>
         <script>
+            
             var buttonCreator = function(id) {
                 var btn = document.createElement("button");
-                var t = document.createTextNode(id);
+                //var t = document.createTextNode(id);
+                var bgImg = category[id].images[0];
                 btn.setAttribute("type", "button");
                 btn.setAttribute("id", id);
                 btn.setAttribute("onclick", "sessionStorage.setItem('category', id); location = 'the_game.html';");                
                 document.getElementById("buttons").appendChild(btn);
-                btn.appendChild(t);
+                //btn.appendChild(t);
+                $(btn).css('background-image', 'url(' + bgImg + ')');
             };
             
-            for (var id in category) {
-               buttonCreator(id); 
+            var age = ageCategories[sessionStorage.getItem("age")];
+            
+            for(i = 0; i < age.length; i++) {
+                buttonCreator(age[i]);
             }
         </script>
     </body>

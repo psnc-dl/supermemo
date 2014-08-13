@@ -3,30 +3,42 @@
     <head>
         <title>SuperMemo</title>
         <meta charset="UTF-8">
+        <meta name="mobile-web-app-capable" content="yes">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <div  class="header"><h1>SuperMemo</h1></div>
+        <div class="header"><h1>SuperMemo</h1></div>
         <div class="log-in">
             <h2>Witaj!</h2>
             <form>
-                Podaj swoje imię:<input type="text" id="name"><br>
-            </form>
-            <div id="buttons">
-                
-            </div>
+                Podaj swoje imię:<input type="text" id="name" onkeydown="enter()" required><br>
+            </form> 
+        </div>  
+        <div id="buttons">
+
         </div>
-        
+        <p id="noName"></p>
         <script src="config.js"></script>
         <script>
+            var enter = function() {
+                if(event.keyCode === 13) {
+                    event.preventDefault();
+                    return false;
+                }
+            };
+            
             var buttonCreator = function(id) {
                 var btn = document.createElement("button");
                 var rangeName = config[id];
                 var t = document.createTextNode(rangeName.ageRange);
                 btn.setAttribute("type", "button");
                 btn.setAttribute("id", id);
-                btn.setAttribute("onclick", "sessionStorage.setItem('age', id); location = 'category.html';");
+                var logIn = function() {
+                    
+                };
+                btn.setAttribute("onclick", "if(document.getElementById('name').value === '') {return $(noName).text('Podaj swoje imie!');} sessionStorage.setItem('age', id); location = 'category.html'; sessionStorage.setItem('username', document.getElementById('name').value); ");
                 document.getElementById("buttons").appendChild(btn);
                 btn.appendChild(t);                
             };

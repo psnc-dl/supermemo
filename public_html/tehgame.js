@@ -14,6 +14,7 @@ var main = function() {
     var montyPointon = 0;
     var matchCard = [];
     var matchIndex = 0;
+    var tryes = 0;
     
     var randomize = function() {
         var x = Math.floor(Math.random() * cardCount);
@@ -74,18 +75,21 @@ var main = function() {
                 if (clickCount === 2 && matchCard.length === 2) {
                     $(".card").css("pointer-events", "none");                
                     //$(test).text("Już 2");
-                    
+                    ++tryes;
+                    $(test4).text(tryes);
                     if (document.getElementById(matchCard[0]).src === document.getElementById(matchCard[1]).src) {
 
                         ++montyPointon;
-                        $(test2).text(montyPointon);
+                        //$(test2).text(montyPointon);
 
                         document.getElementById(matchCard[0]).className = "uncovered";
                         document.getElementById(matchCard[1]).className = "uncovered";
 
                         if (montyPointon === cardCount / 2) {
-                            alert("GZ " + sessionStorage.getItem("username") + 
-                            " you won!!! Za 5 sekund zostaniesz przeniesiony/a na nastepną stronę. Teraz możesz podziwiać.");
+                            localStorage.getItem("username");
+                            localStorage.getItem("tryes");
+                            alert("Gratulacje " + sessionStorage.getItem("username") + 
+                            " znalazłeś/aś wszystkie pary! Za 5 sekund zostaniesz przeniesiony/a na nastepną stronę. Teraz możesz podziwiać.");
                             sessionStorage.clear();
                             setTimeout(function() {
                                 location = "end_game.html";
