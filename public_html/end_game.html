@@ -14,7 +14,8 @@
         <div class="container">
             <div id="message">
                 <h2>Gratulacje!</h2>
-                <p>Własnie ułozyłeś/aś układankę na podstawie publikacji: <span id="publicationName"></span> </p>
+                <p>Udało Ci się ułożyć całą układankę na podstawie publikacji: <span id="publicationName"></span> </p>
+                <br><p>Miejsce na jakąś ciekawostke.</p>
             </div>
             <div id="kwakwa">
                 <div id="publicationImg"><img id="pi" src="" alt="img"></div>
@@ -27,7 +28,7 @@
             $("#publicationName").text(publicationInfo[sessionStorage.getItem("category")]);
             var bgImg = publicationImg[sessionStorage.getItem("category")];
             document.getElementById("pi").src = bgImg;
-            //sessionStorage.clear();
+            sessionStorage.clear();
         </script>
     </body>
 </html>

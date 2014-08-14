@@ -6,6 +6,10 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+h1 {
+    font-size: 28pt;
+}
+
 .header {
     margin-left: auto;
     margin-right: auto;
@@ -17,7 +21,14 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-size: 14pt;
+}
+
+.log-in h2 {
+    font-size: 22pt;
+}
+
+.log-in p {
+    font-size: 20pt;
 }
 
 #buttons{

@@ -20,13 +20,11 @@
             
             var buttonCreator = function(id) {
                 var btn = document.createElement("button");
-                //var t = document.createTextNode(id);
                 var bgImg = category[id].images[0];
                 btn.setAttribute("type", "button");
                 btn.setAttribute("id", id);
                 btn.setAttribute("onclick", "sessionStorage.setItem('category', id); location = 'the_game.html';");                
                 document.getElementById("buttons").appendChild(btn);
-                //btn.appendChild(t);
                 $(btn).css('background-image', 'url(' + bgImg + ')');
             };
             

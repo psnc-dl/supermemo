@@ -13,9 +13,7 @@
         <div class="header"><h1>SuperMemo</h1></div>
         <div class="log-in">
             <h2>Witaj!</h2>
-            <form>
-                Podaj swoje imię:<input type="text" id="name" onkeydown="enter()" required><br>
-            </form> 
+            <p>Ile masz lat?</p>
         </div>  
         <div id="buttons">
 
@@ -35,10 +33,7 @@
                 var t = document.createTextNode(rangeName.ageRange);
                 btn.setAttribute("type", "button");
                 btn.setAttribute("id", id);
-                var logIn = function() {
-                    
-                };
-                btn.setAttribute("onclick", "if(document.getElementById('name').value === '') {return $(noName).text('Podaj swoje imie!');} sessionStorage.setItem('age', id); location = 'category.html'; sessionStorage.setItem('username', document.getElementById('name').value); ");
+                btn.setAttribute("onclick", "sessionStorage.setItem('age', id); location = 'category.html';");
                 document.getElementById("buttons").appendChild(btn);
                 btn.appendChild(t);                
             };

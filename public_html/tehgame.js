@@ -65,26 +65,20 @@ var main = function() {
             var matchId = event.target.id;
             if (matchId !== matchCard[0] && $("#"+matchId).attr("class") !== "uncovered"){
                 matchCard[matchIndex] = matchId;
-                //$(test1).text(matchCard);
                 ++clickCount;
-                //$(test).text(clickCount);
                 matchIndex++;
             }
             
             if(matchCard[0] !== matchCard[1]) {
                 if (clickCount === 2 && matchCard.length === 2) {
-                    $(".card").css("pointer-events", "none");                
-                    //$(test).text("Już 2");
+                    $(".card").css("pointer-events", "none");
                     ++tryes;
                     $(test4).text(tryes);
                     if (document.getElementById(matchCard[0]).src === document.getElementById(matchCard[1]).src) {
 
                         ++montyPointon;
-                        //$(test2).text(montyPointon);
-
                         document.getElementById(matchCard[0]).className = "uncovered";
                         document.getElementById(matchCard[1]).className = "uncovered";
-
                         if (montyPointon === cardCount / 2) {
                             setTimeout(function() {
                                 location = "end_game.html";
