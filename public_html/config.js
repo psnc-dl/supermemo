@@ -171,4 +171,20 @@ var category = {
             "zioła155x155/zioła-018.png"            
         ]
     }
-};           
+};
+
+var publicationImg = {
+    "Inicjały": "literki/a_180.jpg",
+    "Atlas": "atlas155x155/atlas-009.png",
+    "Moda": "mody155x155/01.png",
+    "Ssaki": "ssaki155x155/ssaki02-022.png",
+    "Zioła": "zioła155x155/zioła-006.png"
+};
+
+var publicationInfo = {
+    "Inicjały": "Inicjały",
+    "Atlas": "Atlas",
+    "Moda": "Moda",
+    "Ssaki": "Ssaki",
+    "Zioła": "Zioła"
+};

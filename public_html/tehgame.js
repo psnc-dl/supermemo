@@ -28,9 +28,9 @@ var main = function() {
         randomize();
     }
     
-    
-    $("#gameboard").css({"width": boardWidth * (cardDim + 15), "height": boardHeight * cardDim});
-    
+    $("body").css("margin-top", 0);
+    $("#gameboard").css({"width": boardWidth * (cardDim + 10), "height": boardHeight * (cardDim + 10), "margin-top": -(boardHeight * (cardDim + 10))/2, "margin-left": -(boardWidth * (cardDim + 10))/2});
+    $("#scores").css({"margin-left": (30 + (boardWidth * (cardDim + 10))/2)});
     var creator = function() {
                
         var card = document.createElement("div");
@@ -86,11 +86,6 @@ var main = function() {
                         document.getElementById(matchCard[1]).className = "uncovered";
 
                         if (montyPointon === cardCount / 2) {
-                            localStorage.getItem("username");
-                            localStorage.getItem("tryes");
-                            alert("Gratulacje " + sessionStorage.getItem("username") + 
-                            " znalazłeś/aś wszystkie pary! Za 5 sekund zostaniesz przeniesiony/a na nastepną stronę. Teraz możesz podziwiać.");
-                            sessionStorage.clear();
                             setTimeout(function() {
                                 location = "end_game.html";
                             }, 5000);

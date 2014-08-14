@@ -4,6 +4,7 @@
         <title>SuperMemo</title>
         <meta charset="UTF-8">
         <meta name="mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />        
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
         <link href="style.css" rel="stylesheet">
@@ -22,13 +23,12 @@
         <p id="noName"></p>
         <script src="config.js"></script>
         <script>
-            var enter = function() {
-                if(event.keyCode === 13) {
-                    event.preventDefault();
-                    return false;
-                }
+            document.onkeydown = function (e) {
+                    if(e.which === 13){
+                            return false;
+                    }
             };
-            
+
             var buttonCreator = function(id) {
                 var btn = document.createElement("button");
                 var rangeName = config[id];

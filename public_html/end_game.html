@@ -4,14 +4,30 @@
         <title>SuperMemo</title>
         <meta charset="UTF-8">
         <meta name="mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <div class="header"><h1>SuperMemo</h1></div>
-        <div id="buttons">
-            <button type="button" id="retry" onclick="location = 'index.html'">Spróbuj jeszcze raz</button>
-        </div>        
+        <div class="container">
+            <div id="message">
+                <h2>Gratulacje!</h2>
+                <p>Własnie ułozyłeś/aś układankę na podstawie publikacji: <span id="publicationName"></span> </p>
+            </div>
+            <div id="kwakwa">
+                <div id="publicationImg"><img id="pi" src="" alt="img"></div>
+                <button type="button" id="retry" onclick="location = 'index.html'">Spróbuj jeszcze raz</button>
+            </div>   
+        </div>
+        
+        <script src="config.js"></script>
+        <script>
+            $("#publicationName").text(publicationInfo[sessionStorage.getItem("category")]);
+            var bgImg = publicationImg[sessionStorage.getItem("category")];
+            document.getElementById("pi").src = bgImg;
+            //sessionStorage.clear();
+        </script>
     </body>
 </html>
