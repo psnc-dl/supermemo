@@ -1,3 +1,14 @@
+/* In the config object you can set the parameters of the game for each age category. 
+ * To add a new age category you need to add a new object to the object config. 
+ * The new object must contain the age range of the new category(ageRange), 
+ * the overall quantity of pictures on the game board(cardCount), the quantity of 
+ * pictures on each of the game boards sides (boardWidth and boardHeight) and 
+ * the size of the pictures in pixels(cardSize). By default the picture size is 
+ * set to 155px because it is the best fit for a tablet with a 1280x800 resolution,
+ * the pictures are considered to be squares. The name of the new object 
+ * does not matter. After adding a new age category remember to add a new matrix 
+ * to the ageCategories object to see what image categories should be available for the 
+ * newly added age category. */
 var config = {
     "five": {
         "ageRange": "3 - 5 lat",
@@ -21,13 +32,23 @@ var config = {
         "cardSize": 155
     }
 };
-
+/* In the ageCategories object you can set what image categories will be available 
+ * for each of the age categories. After adding a new age category you must add 
+ * a new matrix to the ageCategories object, the matrix must have the same name 
+ * as the newly added age category, and must contain the names of the image 
+ * categories that are set in the category object. */
 var ageCategories = {
   "five": ["Atlas", "Ssaki", "Zioła"],
   "nine": ["Inicjały", "Atlas", "Moda", "Ssaki", "Zioła"],
   "overNine": ["Inicjały", "Atlas", "Moda", "Ssaki", "Zioła"]
 };
-        
+/* In the category object you can set the image categories. To add a new image 
+ * category you have to add a new object to the category object. The new object 
+ * must contain a matrix named images. The images matrix contains paths to 
+ * images which will be displayed on the game board, each path in the matrix 
+ * must be duplicated. After adding a new image category remember to add it 
+ * to the ageCategories object so it will be displayed, and to add it to the
+ *  publicationImg, publicationInfo and fact objects below. */        
 var category = {
     "Inicjały": {
         "images": [
@@ -172,7 +193,10 @@ var category = {
         ]
     }
 };
-
+/* In the publicationImg object you can set the image of the publication that will 
+ * be displayed on the final page of the game. The name of the string must be 
+ * the same as the category it corresponds, it should contain the path to the 
+ * publication image.*/
 var publicationImg = {
     "Inicjały": "literki/a_180.jpg",
     "Atlas": "atlas155x155/atlas-009.png",
@@ -180,11 +204,23 @@ var publicationImg = {
     "Ssaki": "ssaki155x155/ssaki02-022.png",
     "Zioła": "zioła155x155/zioła-006.png"
 };
-
+/* In the publicationInfo object you can set the name of the publication that will 
+ * be displayed on the final page of the game. The name of the string must be 
+ * the same as the category it corresponds.*/
 var publicationInfo = {
     "Inicjały": "Inicjały",
     "Atlas": "Atlas",
     "Moda": "Moda",
     "Ssaki": "Ssaki",
     "Zioła": "Zioła"
+};
+/* In the fact object you can set the fact about the publication that will 
+ * be displayed on the final page of the game. The name of the string must be 
+ * the same as the category it corresponds.*/
+var fact = {
+    "Inicjały": "Ciekawostka o inicjałach",
+    "Atlas": "Ciekawostka o atlasie",
+    "Moda": "Ciekawostka o modzie",
+    "Ssaki": "Ciekawostka o ssakach",
+    "Zioła": "Ciekawostka o ziołach"
 };
