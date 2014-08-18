@@ -1,13 +1,22 @@
+@font-face {
+    font-family: 'poiretone';
+    src: url('PoiretOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     width: 100%;
     background-color: #CCD8DA;
     margin: 0px;
     border-top: 7px solid #4A6BB2;
-    font-family: 'Lato', sans-serif;
+    font-family: 'poiretone';
+    font-weight: bold;
 }
 
 h1 {
-    font-size: 28pt;
+    font-size: 50px;
 }
 
 .header {
@@ -24,11 +33,11 @@ h1 {
 }
 
 .log-in h2 {
-    font-size: 22pt;
+    font-size: 42px;
 }
 
 .log-in p {
-    font-size: 20pt;
+    font-size: 40px;
 }
 
 #buttons{
@@ -45,7 +54,7 @@ h1 {
 
 #noName {
     text-align: center;
-    font-size: 16pt;
+    font-size: 36px;
     font-weight: bold;
 }
 
@@ -57,7 +66,8 @@ button {
     background-color: #4A6BB2;
     border: 0px;
     border-radius: 8px;
-    font-size: 22pt;
+    font-family: 'poiretone';
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -65,7 +75,7 @@ button {
     position: fixed;
     top: 47%;
     left: 50%;
-    font-size: 16pt;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -78,7 +88,8 @@ button {
     background-color: #4A6BB2;
     border: 0px;
     border-radius: 8px;
-    font-size: 22pt;
+    font-family: 'poiretone';
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -125,12 +136,14 @@ img {
 }
 
 #message h2 {
-    font-size: 24pt;
+    font-size: 34px;
+    font-weight: bold;
     text-align: center;
 }
 
 #message p {
-    font-size: 16pt;
+    font-size: 26px;
+    font-weight: bold;
 }
 
 #kwakwa {
