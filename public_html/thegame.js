@@ -90,9 +90,9 @@ var main = function() {
                     /*This loop checks if the two selected cards have the same image, if 
                      * true then they are left uncovered and a point is given to 
                      * the player, if not then they are covered after 800ms */
-                    if (document.getElementById(matchCard[0]).src === document.getElementById(matchCard[1]).src) {
-
+                    if ($("#"+matchCard[0]).attr("src") === $("#"+matchCard[1]).attr("src")) {
                         ++montyPointon;
+                        
                         document.getElementById(matchCard[0]).className = "uncovered";
                         document.getElementById(matchCard[1]).className = "uncovered";
                         /* This function checks if all of the cards were uncovered 
