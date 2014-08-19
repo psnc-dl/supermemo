@@ -122,7 +122,7 @@ img {
 
 .container {
     position: fixed;
-    width: 1065px;
+    width: 1075px;
     height: 500px;
     top: 50%;
     left: 50%;
@@ -131,7 +131,7 @@ img {
 }
 
 #message {
-    width: 600px;
+    width: 610px;
     margin: 10px;
     float: left;
 }
@@ -147,7 +147,7 @@ img {
     font-weight: bold;
 }
 
-#kwakwa {
+#pubImageHolder {
     width: 400px;
     margin: 10px;
     float: right;
@@ -161,4 +161,20 @@ img {
 #publicationImg img {
     width: 300px;
     height: 300px;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: black;
 }

@@ -134,7 +134,7 @@ var category = {
             "mody155x155/37.png",
             "mody155x155/37.png",
             "mody155x155/30.png",
-            "mody155x155/30.png",
+            "mody155x155/30.png"
         ]
     },
     "Ssaki": {
@@ -162,7 +162,7 @@ var category = {
             "ssaki155x155/ssaki03-019.png",
             "ssaki155x155/ssaki03-019.png",
             "ssaki155x155/ssaki02-027.png",
-            "ssaki155x155/ssaki02-027.png",
+            "ssaki155x155/ssaki02-027.png"
         ]
     },
     "Zioła": {
@@ -190,7 +190,7 @@ var category = {
             "zioła155x155/zioła-013.png",
             "zioła155x155/zioła-013.png",
             "zioła155x155/zioła-042.png",
-            "zioła155x155/zioła-042.png",
+            "zioła155x155/zioła-042.png"
         ]
     }
 };
