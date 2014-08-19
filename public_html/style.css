@@ -51,6 +51,12 @@ h1 {
     display: inline-block;
 }
 
+.ageDiv {
+    width: 150px;
+    text-align: center;
+}
+
+
 button {
     margin: 10px;
     margin-top: 30px;
@@ -59,6 +65,7 @@ button {
     background-color: #4A6BB2;
     border: 0px;
     border-radius: 8px;
+    padding: 0px;
     font-family: 'poiretone';
     font-size: 35px;
     font-weight: bold;
@@ -153,9 +160,4 @@ img {
 #publicationImg img {
     width: 300px;
     height: 300px;
-}
-
-.ageDiv {
-	width: 155px;
-    text-align: center;
 }
