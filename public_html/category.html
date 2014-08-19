@@ -16,17 +16,21 @@
         
         <script src="config.js"></script>
         <script>
-            
+            /* This function creates category buttons depending on the config.js 
+             * file and the age category selected on the previous page.*/
             var buttonCreator = function(id) {
                 var btn = document.createElement("button");
                 var bgImg = categoryBg[id];
                 btn.setAttribute("type", "button");
                 btn.setAttribute("id", id);
+                /* This onclick event passes the category parameter to the session 
+                 * storage so it can be accessed on further pages. */
                 btn.setAttribute("onclick", "sessionStorage.setItem('category', id); location = 'the_game.html';");                
                 document.getElementById("buttons").appendChild(btn);
                 $(btn).css('background-image', 'url(' + bgImg + ')');
             };
-            
+            /* This line gets the array containing the categories list for each 
+             * of the age categories. */
             var age = ageCategories[sessionStorage.getItem("age")];
             
             for(i = 0; i < age.length; i++) {

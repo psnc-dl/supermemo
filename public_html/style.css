@@ -121,7 +121,7 @@ img {
 
 .container {
     position: fixed;
-    width: 900px;
+    width: 1065px;
     height: 500px;
     top: 50%;
     left: 50%;
@@ -130,7 +130,7 @@ img {
 }
 
 #message {
-    width: 400px;
+    width: 600px;
     margin: 10px;
     float: left;
 }

@@ -20,18 +20,22 @@
         <p id="noName"></p>
         <script src="config.js"></script>
         <script>
+            /* This function blocks use of the enter key. By adding more 
+             * if loops with different numbers you can block other keys. */
             document.onkeydown = function (e) {
                     if(e.which === 13){
                             return false;
                     }
             };
-
+            /* This function creates age category buttons depending on the config.js file. */
             var buttonCreator = function(id) {
                 var btn = document.createElement("button");
                 var rangeName = config[id];
                 var t = document.createTextNode(rangeName.ageRange);
                 btn.setAttribute("type", "button");
                 btn.setAttribute("id", id);
+                /* This onclick event passes the age parameter to the session 
+                 * storage so it can be accessed on further pages. */
                 btn.setAttribute("onclick", "sessionStorage.setItem('age', id); location = 'category.html';");
                 document.getElementById("buttons").appendChild(btn);
                 btn.appendChild(t);                

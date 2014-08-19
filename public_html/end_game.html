@@ -13,7 +13,7 @@
         <div class="container">
             <div id="message">
                 <h2>Gratulacje!</h2>
-                <p>Udało Ci się ułożyć całą układankę na podstawie publikacji: <span id="publicationName"></span> </p>
+                <p>Udało Ci się znaleźć wszystkie pary w <span id="tries"></span> próbach. <br><br>Obrazki pochodziły z publikacji: <span id="publicationName"></span></p>
                 <br><p id="fact"></p>
             </div>
             <div id="kwakwa">
@@ -24,10 +24,17 @@
         
         <script src="config.js"></script>
         <script>
+            // This line loadthe publication name.
             $("#publicationName").text(publicationInfo[sessionStorage.getItem("category")]);
+            // This line load the number of tries that the player had.
+            $("#tries").text(sessionStorage.getItem("tries"));
+            // This line load the fact about the publication.
             $("#fact").text(fact[sessionStorage.getItem("category")]);
+            // These two line load the publication image.
             var bgImg = publicationImg[sessionStorage.getItem("category")];
             $("#pi").attr("src", bgImg);
+            /* This line cleare the session storage, just to ensure that it will 
+             * not interfere with the next game. */
             sessionStorage.clear();
         </script>
     </body>
