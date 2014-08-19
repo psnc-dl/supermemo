@@ -7,11 +7,11 @@
 
 body {
     width: 100%;
-    background-color: #CCD8DA;
+    background-color: #fcefd1;
     margin: 0px;
-    border-top: 7px solid #4A6BB2;
-    font-family: 'poiretone';
-    font-weight: bold;
+    border-top: 7px solid #7FB1B0;
+    font-family: 'lobster';
+    font-weight: lighter;
 }
 
 h1 {
@@ -61,13 +61,13 @@ button {
     margin: 30px 10px 10px 10px;
     width: 155px;
     height: 155px;
-    background-color: #4A6BB2;
+    background-color: #7FB1B0;
     border: 0px;
     border-radius: 8px;
     padding: 0px;
-    font-family: 'poiretone';
+    font-family: 'lobster';
     font-size: 35px;
-    font-weight: bold;
+    font-weight: lighter;
     color: black;
 }
 
@@ -76,7 +76,7 @@ button {
     top: 47%;
     left: 50%;
     font-size: 35px;
-    font-weight: bold;
+    font-weight: lighter;
 }
 
 #retry {
@@ -85,12 +85,12 @@ button {
     margin-right: auto;
     width: 300px;
     height: 155px;
-    background-color: #4A6BB2;
+    background-color: #7FB1B0;
     border: 0px;
     border-radius: 8px;
-    font-family: 'poiretone';
+    font-family: 'lobster';
     font-size: 35px;
-    font-weight: bold;
+    font-weight: lighter;
     color: black;
 }
 
@@ -102,7 +102,7 @@ button {
 
 .card {
     position: relative;
-    background-color: #4A6BB2;
+    background-color: #7FB1B0;
     border-radius: 8px;
     margin: 5px;
     float: left;
@@ -138,7 +138,7 @@ img {
 
 #message h2 {
     font-size: 34px;
-    font-weight: bold;
+    font-weight: lighter;
     text-align: center;
 }
 
