@@ -229,9 +229,9 @@ var publicationInfo = {
  * be displayed on the final page of the game. The name of the string must be 
  * the same as the category it corresponds to. */
 var fact = {
-    "Inicjały": "Ciekawostka o inicjałach",
-    "Atlas": "Ciekawostka o atlasie",
-    "Moda": "Ciekawostka o modzie",
-    "Ssaki": "Ciekawostka o ssakach",
-    "Zioła": "Ciekawostka o ziołach"
+    "Inicjały": "<a href='http://www.google.pl'>Ciekawostka</a> o inicjałach",
+    "Atlas": "<a href='http://www.google.pl'>Ciekawostka</a> o atlasie",
+    "Moda": "<a href='http://www.google.pl'>Ciekawostka</a> o modzie",
+    "Ssaki": "<a href='http://www.google.pl'>Ciekawostka</a> o ssakach",
+    "Zioła": "<a href='http://www.google.pl'>Ciekawostka</a> o ziołach"
 };

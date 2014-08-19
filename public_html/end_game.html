@@ -29,7 +29,7 @@
             // This line load the number of tries that the player had.
             $("#tries").text(sessionStorage.getItem("tries"));
             // This line load the fact about the publication.
-            $("#fact").text(fact[sessionStorage.getItem("category")]);
+            $("#fact").html(fact[sessionStorage.getItem("category")]);
             // These two line load the publication image.
             var bgImg = publicationImg[sessionStorage.getItem("category")];
             $("#pi").attr("src", bgImg);
