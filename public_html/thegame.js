@@ -51,6 +51,7 @@ var main = function() {
         image.setAttribute("class", "covered");
         image.setAttribute("src", " ");
         image.setAttribute("alt", "img");
+        image.setAttribute("draggable", "false");
         
         document.getElementById("gameboard").appendChild(card);
         card.appendChild(image);
