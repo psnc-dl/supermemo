@@ -31,14 +31,17 @@
             var buttonCreator = function(id) {
                 var btn = document.createElement("button");
                 var rangeName = config[id];
+                var div = document.createElement("div");
                 var t = document.createTextNode(rangeName.ageRange);
+				div.setAttribute("class", "ageDiv");
                 btn.setAttribute("type", "button");
                 btn.setAttribute("id", id);
                 /* This onclick event passes the age parameter to the session 
                  * storage so it can be accessed on further pages. */
                 btn.setAttribute("onclick", "sessionStorage.setItem('age', id); location = 'category.html';");
                 document.getElementById("buttons").appendChild(btn);
-                btn.appendChild(t);                
+                btn.appendChild(div);                
+                div.appendChild(t);                
             };
             
             for(var id in config) {
