@@ -3,7 +3,6 @@
     src: url('PoiretOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body {
@@ -50,12 +49,6 @@ h1 {
 
 .log-in #buttons {
     display: inline-block;
-}
-
-#noName {
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
 }
 
 button {
