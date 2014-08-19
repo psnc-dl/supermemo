@@ -198,7 +198,7 @@ var category = {
  * for the category buttons. The name of the string must be the same as the 
  * category it corresponds to, it should contain the path to the background image. */
 var categoryBg = {
-    "Inicjały": "literki155x155/s.jpg",
+    "Inicjały": "literki155x155/a.jpg",
     "Atlas": "atlas155x155/atlas-009.png",
     "Moda": "mody155x155/01.png",
     "Ssaki": "ssaki155x155/ssaki02-022.png",
@@ -209,7 +209,7 @@ var categoryBg = {
  * the same as the category it corresponds to, it should contain the path to the 
  * publication image. */
 var publicationImg = {
-    "Inicjały": "literki155x155/s.jpg",
+    "Inicjały": "literki155x155/a.jpg",
     "Atlas": "atlas155x155/atlas-009.png",
     "Moda": "mody155x155/01.png",
     "Ssaki": "ssaki155x155/ssaki02-022.png",
