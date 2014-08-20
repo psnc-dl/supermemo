@@ -167,30 +167,30 @@ var category = {
     },
     "Zioła": {
         "images": [
-            "zioła155x155/zioła-006.png",
-            "zioła155x155/zioła-006.png",
-            "zioła155x155/zioła-043.png",
-            "zioła155x155/zioła-043.png",
-            "zioła155x155/zioła-048.png",
-            "zioła155x155/zioła-048.png",
-            "zioła155x155/zioła-022.png",
-            "zioła155x155/zioła-022.png",
-            "zioła155x155/zioła-018.png",
-            "zioła155x155/zioła-018.png",
-            "zioła155x155/zioła-037.png",
-            "zioła155x155/zioła-037.png",
-            "zioła155x155/zioła-016.png",
-            "zioła155x155/zioła-016.png",
-            "zioła155x155/zioła-026.png",
-            "zioła155x155/zioła-026.png",
-            "zioła155x155/zioła-009.png",
-            "zioła155x155/zioła-009.png",
-            "zioła155x155/zioła-023.png",
-            "zioła155x155/zioła-023.png",
-            "zioła155x155/zioła-013.png",
-            "zioła155x155/zioła-013.png",
-            "zioła155x155/zioła-042.png",
-            "zioła155x155/zioła-042.png"
+            "ziola155x155/ziola-006.png",
+            "ziola155x155/ziola-006.png",
+            "ziola155x155/ziola-043.png",
+            "ziola155x155/ziola-043.png",
+            "ziola155x155/ziola-048.png",
+            "ziola155x155/ziola-048.png",
+            "ziola155x155/ziola-022.png",
+            "ziola155x155/ziola-022.png",
+            "ziola155x155/ziola-018.png",
+            "ziola155x155/ziola-018.png",
+            "ziola155x155/ziola-037.png",
+            "ziola155x155/ziola-037.png",
+            "ziola155x155/ziola-016.png",
+            "ziola155x155/ziola-016.png",
+            "ziola155x155/ziola-026.png",
+            "ziola155x155/ziola-026.png",
+            "ziola155x155/ziola-009.png",
+            "ziola155x155/ziola-009.png",
+            "ziola155x155/ziola-023.png",
+            "ziola155x155/ziola-023.png",
+            "ziola155x155/ziola-013.png",
+            "ziola155x155/ziola-013.png",
+            "ziola155x155/ziola-042.png",
+            "ziola155x155/ziola-042.png"
         ]
     }
 };
@@ -202,7 +202,7 @@ var categoryBg = {
     "Atlas": "atlas155x155/atlas-009.png",
     "Moda": "mody155x155/01.png",
     "Ssaki": "ssaki155x155/ssaki02-022.png",
-    "Zioła": "zioła155x155/zioła-018.png"
+    "Zioła": "ziola155x155/ziola-018.png"
 };
 /* In the publicationImg object you can set the image of the publication that will 
  * be displayed on the final page of the game. The name of the string must be 
@@ -213,7 +213,7 @@ var publicationImg = {
     "Atlas": "atlas155x155/atlas-009.png",
     "Moda": "mody155x155/01.png",
     "Ssaki": "ssaki155x155/ssaki02-022.png",
-    "Zioła": "zioła155x155/zioła-018.png"
+    "Zioła": "ziola155x155/ziola-018.png"
 };
 /* In the publicationInfo object you can set the name of the publication that will 
  * be displayed on the final page of the game. The name of the string must be 
