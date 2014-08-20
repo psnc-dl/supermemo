@@ -229,12 +229,9 @@ var publicationInfo = {
  * be displayed on the final page of the game. The name of the string must be 
  * the same as the category it corresponds to. */
 var fact = {
-    /*
-	"Inicjały": "<a href='http://www.google.pl'>Ciekawostka</a> o inicjałach",
-	*/
-    "Inicjały": "Inicjały to ozdobne litery rozpoczynające rozdział lub akapit. Album zawiera inicjały pochodzące z Włoch, z początku XVI wieku. Bogatą kolekcję ręcznie malowanych i zdobionych liter można podziwiać w Cyfrowej Bibliotece Narodowej Polona.",
-    "Atlas":    "Atlas został wydany w latach 1903-1907 przez Józefa Michała Bazewicza. Stanowi cenne źródło wiadomości geograficznych, historycznych i gospodarczych. Publikację można zobaczyć w Zielonogórskiej Bibliotece Cyfrowej.",
-    "Mody":     "Mody Paryzkie były wydawane w latach 1879-1883 w Warszawie. Periodyk przekazywał informacje dotyczące najnowszych trendów modowych, instruował jak wykonać samodzielnie stroje i dodatki, udzielał porad dotyczących dobrego wychowania. Zawierał także utwory literackie (drukowane częściami w kolejnych numerach). Z wydawnictwem można się zapoznać w E-Bibliotece Uniwersytetu Warszawskiego.", 
-    "Ssaki":    "Atlas został wydany w roku 1931. Zawiera rysunki i krótkie opisy ssaków, nie tylko Polski, ale także z krajów egzotycznych. Z publikacją można się zapoznać dzięki Łowieckiej Bibliotece Cyfrowej Krzysztofa Daszkiewicza.",
-    "Zioła":    "Atlas został wydany w roku 1925 przez Wydawnictwo M. Arcta w Warszawie. Zawiera 46 kolorowych ilustracji, pomagających w identyfikacji ponad 70 roślin leczniczych. Publikację można obejrzeć w Kujawsko-Pomorskiej Bibliotece Cyfrowej."
+    "Inicjały": "Inicjały to ozdobne litery rozpoczynające rozdział lub akapit. Album zawiera inicjały pochodzące z&nbsp;Włoch, z&nbsp;początku XVI&nbsp;wieku. Bogatą kolekcję ręcznie malowanych i&nbsp;zdobionych liter można <a href='http://www.polona.pl/item/8636953/16/'>podziwiać</a> w&nbsp;Cyfrowej Bibliotece Narodowej Polona.",
+    "Atlas":    "Atlas został wydany w&nbsp;latach 1903-1907 przez Józefa Michała Bazewicza. Stanowi cenne źródło wiadomości geograficznych, historycznych i&nbsp;gospodarczych. Publikację można <a href='http://zbc.uz.zgora.pl/dlibra/doccontent?id=14646&from=publication'>zobaczyć</a> w&nbsp;Zielonogórskiej Bibliotece Cyfrowej.",
+    "Mody":     "Mody Paryzkie były wydawane w&nbsp;latach 1879-1883 w&nbsp;Warszawie. Periodyk przekazywał informacje dotyczące najnowszych trendów modowych, instruował jak wykonać samodzielnie stroje i&nbsp;dodatki, udzielał porad dotyczących dobrego wychowania. Zawierał także utwory literackie, drukowane odcinkami. Z&nbsp;wydawnictwem można się <a href='http://ebuw.uw.edu.pl/dlibra/publication?id=58154&tab=3'>zapoznać</a> w&nbsp;E-Bibliotece Uniwersytetu Warszawskiego.", 
+    "Ssaki":    "Atlas został wydany w&nbsp;roku 1931. Zawiera rysunki i&nbsp;krótkie opisy ssaków, nie tylko Polski, ale także z&nbsp;krajów egzotycznych. Z&nbsp;publikacją można się <a href='http://www.wbc.poznan.pl/dlibra/publication?id=133115&tab=3'>zapoznać</a> dzięki Łowieckiej Bibliotece Cyfrowej Krzysztofa Daszkiewicza.",
+    "Zioła":    "Atlas został wydany w&nbsp;roku 1925 przez Wydawnictwo M.&nbsp;Arcta w&nbsp;Warszawie. Zawiera 46 kolorowych ilustracji, pomagających w&nbsp;identyfikacji ponad 70 roślin leczniczych. Publikację można <a href='http://kpbc.umk.pl/dlibra/doccontent?id=39570&from=publication'>obejrzeć</a> w&nbsp;Kujawsko-Pomorskiej Bibliotece Cyfrowej."
 };
