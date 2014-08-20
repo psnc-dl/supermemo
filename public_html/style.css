@@ -47,6 +47,8 @@ h1 {
     text-align: center;
 }
 
+button:focus {outline:0;}
+
 .log-in #buttons {
     display: inline-block;
 }
