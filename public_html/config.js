@@ -42,8 +42,8 @@ var config = {
  * categories that are set in the category object. */
 var ageCategories = {
   "five": ["Atlas", "Ssaki", "Zioła"],
-  "nine": ["Inicjały", "Atlas", "Moda", "Ssaki", "Zioła"],
-  "overNine": ["Inicjały", "Atlas", "Moda", "Ssaki", "Zioła"]
+  "nine": ["Inicjały", "Atlas", "Mody", "Ssaki", "Zioła"],
+  "overNine": ["Inicjały", "Atlas", "Mody", "Ssaki", "Zioła"]
 };
 /* In the category object you can set the image categories. To add a new image 
  * category you have to add a new object to the category object. The new object 
@@ -109,7 +109,7 @@ var category = {
             "atlas155x155/atlas-072.png"
         ]
     },
-    "Moda": {
+    "Mody": {
         "images": [
             "mody155x155/01.png",
             "mody155x155/01.png",
@@ -200,7 +200,7 @@ var category = {
 var categoryBg = {
     "Inicjały": "literki155x155/a.jpg",
     "Atlas": "atlas155x155/atlas-009.png",
-    "Moda": "mody155x155/01.png",
+    "Mody": "mody155x155/01.png",
     "Ssaki": "ssaki155x155/ssaki02-022.png",
     "Zioła": "ziola155x155/ziola-018.png"
 };
@@ -209,29 +209,32 @@ var categoryBg = {
  * the same as the category it corresponds to, it should contain the path to the 
  * publication image. */
 var publicationImg = {
-    "Inicjały": "literki155x155/a.jpg",
-    "Atlas": "atlas155x155/atlas-009.png",
-    "Moda": "mody155x155/01.png",
-    "Ssaki": "ssaki155x155/ssaki02-022.png",
-    "Zioła": "ziola155x155/ziola-018.png"
+    "Inicjały": "literki155x155/literki-title.png",
+    "Atlas": "atlas155x155/atlas-title.png",
+    "Mody": "mody155x155/mody-title.png",
+    "Ssaki": "ssaki155x155/ssaki-title.png",
+    "Zioła": "ziola155x155/ziola-title.png"
 };
 /* In the publicationInfo object you can set the name of the publication that will 
  * be displayed on the final page of the game. The name of the string must be 
  * the same as the category it corresponds to. */
 var publicationInfo = {
-    "Inicjały": "Inicjały",
-    "Atlas": "Atlas",
-    "Moda": "Moda",
-    "Ssaki": "Ssaki",
-    "Zioła": "Zioła"
+    "Inicjały": "Album inicjałów średniowiecznych",
+    "Atlas":    "Atlas geograficzny ilustrowany Królestwa Polskiego",
+    "Mody":     "Mody Paryzkie. Pismo illustrowane dla kobiet",
+    "Ssaki":    "Mały atlas zwierząt ssących",
+    "Zioła":    "Atlas ziół leczniczych"
 };
 /* In the fact object you can set the fact about the publication that will 
  * be displayed on the final page of the game. The name of the string must be 
  * the same as the category it corresponds to. */
 var fact = {
-    "Inicjały": "<a href='http://www.google.pl'>Ciekawostka</a> o inicjałach",
-    "Atlas": "<a href='http://www.google.pl'>Ciekawostka</a> o atlasie",
-    "Moda": "<a href='http://www.google.pl'>Ciekawostka</a> o modzie",
-    "Ssaki": "<a href='http://www.google.pl'>Ciekawostka</a> o ssakach",
-    "Zioła": "<a href='http://www.google.pl'>Ciekawostka</a> o ziołach"
+    /*
+	"Inicjały": "<a href='http://www.google.pl'>Ciekawostka</a> o inicjałach",
+	*/
+    "Inicjały": "Inicjały to ozdobne litery rozpoczynające rozdział lub akapit. Album zawiera inicjały pochodzące z Włoch, z początku XVI wieku. Bogatą kolekcję ręcznie malowanych i zdobionych liter można podziwiać w Cyfrowej Bibliotece Narodowej Polona.",
+    "Atlas":    "Atlas został wydany w latach 1903-1907 przez Józefa Michała Bazewicza. Stanowi cenne źródło wiadomości geograficznych, historycznych i gospodarczych. Publikację można zobaczyć w Zielonogórskiej Bibliotece Cyfrowej.",
+    "Mody":     "Mody Paryzkie były wydawane w latach 1879-1883 w Warszawie. Periodyk przekazywał informacje dotyczące najnowszych trendów modowych, instruował jak wykonać samodzielnie stroje i dodatki, udzielał porad dotyczących dobrego wychowania. Zawierał także utwory literackie (drukowane częściami w kolejnych numerach). Z wydawnictwem można się zapoznać w E-Bibliotece Uniwersytetu Warszawskiego.", 
+    "Ssaki":    "Atlas został wydany w roku 1931. Zawiera rysunki i krótkie opisy ssaków, nie tylko Polski, ale także z krajów egzotycznych. Z publikacją można się zapoznać dzięki Łowieckiej Bibliotece Cyfrowej Krzysztofa Daszkiewicza.",
+    "Zioła":    "Atlas został wydany w roku 1925 przez Wydawnictwo M. Arcta w Warszawie. Zawiera 46 kolorowych ilustracji, pomagających w identyfikacji ponad 70 roślin leczniczych. Publikację można obejrzeć w Kujawsko-Pomorskiej Bibliotece Cyfrowej."
 };
