@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>RetroMemo</title>
-        <meta charset="UTF-8">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <link href="style.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <div class="header"><h1>RetroMemo</h1></div>
-        <div class="container">
-            <div id="message">
-                <h2>Gratulacje!</h2>
-                <p>Udało Ci się znaleźć wszystkie pary w <span id="tries"></span> próbach. <br><br>Obrazki pochodziły z publikacji: <span id="publicationName"></span>.</p>
-                <p id="fact"></p>
-            </div>
-            <div id="pubImageHolder">
-                <div id="publicationImg"><img id="pi" src="" alt="img"></div>
-                <button type="button" id="retry" onclick="location = 'index.html'">Spróbuj jeszcze raz</button>
-            </div>   
-        </div>
-        
-        <script src="config.js"></script>
-        <script>
-            // This line loadthe publication name.
-            $("#publicationName").text(publicationInfo[sessionStorage.getItem("category")]);
-            // This line load the number of tries that the player had.
-            $("#tries").text(sessionStorage.getItem("tries"));
-            // This line load the fact about the publication.
-            $("#fact").html(fact[sessionStorage.getItem("category")]);
-            // These two line load the publication image.
-            var bgImg = publicationImg[sessionStorage.getItem("category")];
-            $("#pi").attr("src", bgImg);
-            /* This line cleares the session storage, just to ensure that it will 
-             * not interfere with the next game. */
-            //sessionStorage.clear();
-        </script>
-    </body>
+	<head>
+		<title>RetroMemo</title>
+		<meta charset="UTF-8">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link href="style.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div class="header"><h1>RetroMemo</h1></div>
+		<div class="container">
+			<div id="message">
+				<h2>Gratulacje!</h2>
+				<p>Udało Ci się znaleźć wszystkie pary w <span id="tries"></span> próbach. <br><br>Obrazki pochodziły z publikacji: <span id="publicationName"></span>.</p>
+				<p id="fact"></p>
+			</div>
+			<div id="pubImageHolder">
+				<div id="publicationImg"><a id="piLink" href=""><img id="pi" src="" alt="img"></a></div>
+				<button type="button" id="retry" onclick="location = 'index.html'">Spróbuj jeszcze raz</button>
+			</div>   
+		</div>
+		
+		<script src="config.js"></script>
+		<script>
+			// load the publication name
+			$("#publicationName").text(publicationInfo[sessionStorage.getItem("category")]);
+			// load the number of tries that player had
+			$("#tries").text(sessionStorage.getItem("tries"));
+			// load the fact about the publication
+			$("#fact").html(fact[sessionStorage.getItem("category")]);
+			// load the publication image
+			var bgImg = publicationImg[sessionStorage.getItem("category")];
+			$("#pi").attr("src", bgImg);
+			// make image a link
+			$("#piLink").attr("href", imgLink[sessionStorage.getItem("category")]);
+			// clear the session storage 
+			// (just to ensure it will not interfere with the next game)
+			// - probably not needed now
+			//sessionStorage.clear();
+		</script>
+	</body>
 </html>
