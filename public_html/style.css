@@ -7,9 +7,9 @@
 
 body {
     width: 100%;
-    background-color: #fcefd1;
+    /* background-color: #fcefd1; */
     margin: 0px;
-    border-top: 7px solid #7FB1B0;
+    /* border-top: 7px solid #7FB1B0; */
     font-family: 'lobster';
     font-weight: lighter;
 }
@@ -183,3 +183,17 @@ a:hover {
 a:active {
     color: black;
 }
+
+/* this is class for body markup */
+.backgroundLight
+{
+	background-color: #DDDDD4;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .8)), color-stop(.5, transparent), to(transparent));
+	background-image: -moz-linear-gradient(rgba(255, 255, 255, .8) 50%, transparent 50%, transparent);
+	background-image: -o-linear-gradient(rgba(255, 255, 255, .8) 50%, transparent 50%, transparent);
+	background-image: linear-gradient(rgba(255, 255, 255, .8) 50%, transparent 50%, transparent);
+	-webkit-background-size: 4px 4px;
+	-moz-background-size: 4px 4px;
+	background-size: 4px 4px;
+}
+
