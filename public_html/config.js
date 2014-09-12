@@ -42,8 +42,8 @@ var config = {
  * categories that are set in the category object. */
 var ageCategories = {
   "five": ["Atlas", "Ssaki", "Zioła"],
-  "nine": ["Inicjały", "Atlas", "Mody", "Ssaki", "Zioła"],
-  "overNine": ["Inicjały", "Atlas", "Mody", "Ssaki", "Zioła"]
+  "nine": ["Motyle", "Atlas", "Mody", "Ssaki", "Zioła"],
+  "overNine": ["Motyle", "Atlas", "Mody", "Ssaki", "Zioła"]
 };
 /* In the category object you can set the image categories. To add a new image 
  * category you have to add a new object to the category object. The new object 
@@ -52,145 +52,177 @@ var ageCategories = {
  * must be duplicated. After adding a new image category remember to add it 
  * to the ageCategories object so it will be displayed, and to add it to the
  * publicationImg, publicationInfo and fact objects below. */        
+
+/* The order of images in all categories was chosen on purpose, 
+ * so that for younger age categories
+ * the most distinguishable images were chosen. */
 var category = {
     "Inicjały": {
         "images": [
-            "inicjaly/s.jpg",
-            "inicjaly/s.jpg",                                                       
-            "inicjaly/a_smok.jpg", 
-            "inicjaly/a_smok.jpg",
-            "inicjaly/m.jpg", 
-            "inicjaly/m.jpg",
-            "inicjaly/o.jpg",
-            "inicjaly/o.jpg",
-            "inicjaly/p.jpg",
-            "inicjaly/p.jpg",
-            "inicjaly/u2.jpg",
-            "inicjaly/u2.jpg",
-            "inicjaly/d.jpg",
-            "inicjaly/d.jpg", 
-            "inicjaly/u.jpg",
-            "inicjaly/u.jpg",
-            "inicjaly/a.jpg",
-            "inicjaly/a.jpg",
-            "inicjaly/h2.jpg",
-            "inicjaly/h2.jpg",
-            "inicjaly/l.jpg",
-            "inicjaly/l.jpg",
-            "inicjaly/o2.jpg",
-            "inicjaly/o2.jpg"
+            "karty/inicjaly/s.jpg",
+            "karty/inicjaly/s.jpg",                                                       
+            "karty/inicjaly/a_smok.jpg", 
+            "karty/inicjaly/a_smok.jpg",
+            "karty/inicjaly/m.jpg", 
+            "karty/inicjaly/m.jpg",
+            "karty/inicjaly/o.jpg",
+            "karty/inicjaly/o.jpg",
+            "karty/inicjaly/p.jpg",
+            "karty/inicjaly/p.jpg",
+            "karty/inicjaly/u2.jpg",
+            "karty/inicjaly/u2.jpg",
+            "karty/inicjaly/d.jpg",
+            "karty/inicjaly/d.jpg", 
+            "karty/inicjaly/u.jpg",
+            "karty/inicjaly/u.jpg",
+            "karty/inicjaly/a.jpg",
+            "karty/inicjaly/a.jpg",
+            "karty/inicjaly/h2.jpg",
+            "karty/inicjaly/h2.jpg",
+            "karty/inicjaly/l.jpg",
+            "karty/inicjaly/l.jpg",
+            "karty/inicjaly/o2.jpg",
+            "karty/inicjaly/o2.jpg"
         ]
     },
     "Atlas": {
         "images": [
-            "atlas/atlas-009.png",
-            "atlas/atlas-009.png",
-            "atlas/atlas-014.png",
-            "atlas/atlas-014.png",
-            "atlas/atlas-020.png",
-            "atlas/atlas-020.png",
-            "atlas/atlas-022.png",
-            "atlas/atlas-022.png",
-            "atlas/atlas-038.png",
-            "atlas/atlas-038.png",
-            "atlas/atlas-036.png",
-            "atlas/atlas-036.png",
-            "atlas/atlas-048.png",
-            "atlas/atlas-048.png",
-            "atlas/atlas-060.png",
-            "atlas/atlas-060.png",
-            "atlas/atlas-064.png",
-            "atlas/atlas-064.png",
-            "atlas/atlas-068.png",
-            "atlas/atlas-068.png",
-            "atlas/atlas-070.png",
-            "atlas/atlas-070.png",
-            "atlas/atlas-072.png",
-            "atlas/atlas-072.png"
+            "karty/atlas/atlas-009.png",
+            "karty/atlas/atlas-009.png",
+            "karty/atlas/atlas-014.png",
+            "karty/atlas/atlas-014.png",
+            "karty/atlas/atlas-020.png",
+            "karty/atlas/atlas-020.png",
+            "karty/atlas/atlas-022.png",
+            "karty/atlas/atlas-022.png",
+            "karty/atlas/atlas-038.png",
+            "karty/atlas/atlas-038.png",
+            "karty/atlas/atlas-036.png",
+            "karty/atlas/atlas-036.png",
+            "karty/atlas/atlas-048.png",
+            "karty/atlas/atlas-048.png",
+            "karty/atlas/atlas-060.png",
+            "karty/atlas/atlas-060.png",
+            "karty/atlas/atlas-064.png",
+            "karty/atlas/atlas-064.png",
+            "karty/atlas/atlas-068.png",
+            "karty/atlas/atlas-068.png",
+            "karty/atlas/atlas-070.png",
+            "karty/atlas/atlas-070.png",
+            "karty/atlas/atlas-072.png",
+            "karty/atlas/atlas-072.png"
         ]
     },
     "Mody": {
         "images": [
-            "mody/01.png",
-            "mody/01.png",
-            "mody/02.png",
-            "mody/02.png",
-            "mody/05.png",
-            "mody/05.png",
-            "mody/09.png",
-            "mody/09.png",
-            "mody/13.png",
-            "mody/13.png",
-            "mody/15.png",
-            "mody/15.png",
-            "mody/14.png",
-            "mody/14.png",
-            "mody/12.png",
-            "mody/12.png",
-            "mody/16.png",
-            "mody/16.png",
-            "mody/34.png",
-            "mody/34.png",
-            "mody/37.png",
-            "mody/37.png",
-            "mody/30.png",
-            "mody/30.png"
+            "karty/mody/01.png",
+            "karty/mody/01.png",
+            "karty/mody/02.png",
+            "karty/mody/02.png",
+            "karty/mody/05.png",
+            "karty/mody/05.png",
+            "karty/mody/09.png",
+            "karty/mody/09.png",
+            "karty/mody/13.png",
+            "karty/mody/13.png",
+            "karty/mody/15.png",
+            "karty/mody/15.png",
+            "karty/mody/14.png",
+            "karty/mody/14.png",
+            "karty/mody/12.png",
+            "karty/mody/12.png",
+            "karty/mody/16.png",
+            "karty/mody/16.png",
+            "karty/mody/34.png",
+            "karty/mody/34.png",
+            "karty/mody/37.png",
+            "karty/mody/37.png",
+            "karty/mody/30.png",
+            "karty/mody/30.png"
         ]
     },
     "Ssaki": {
         "images": [
-            "ssaki/ssaki01-018.png",
-            "ssaki/ssaki01-018.png",
-            "ssaki/ssaki01-026.png",
-            "ssaki/ssaki01-026.png",
-            "ssaki/ssaki02-022.png",
-            "ssaki/ssaki02-022.png",
-            "ssaki/ssaki02-023.png",
-            "ssaki/ssaki02-023.png",
-            "ssaki/ssaki03-025.png",
-            "ssaki/ssaki03-025.png",
-            "ssaki/ssaki01-027.png",
-            "ssaki/ssaki01-027.png",
-            "ssaki/ssaki02-021.png",
-            "ssaki/ssaki02-021.png",
-            "ssaki/ssaki02-026.png",
-            "ssaki/ssaki02-026.png",
-            "ssaki/ssaki03-024.png",
-            "ssaki/ssaki03-024.png",
-            "ssaki/ssaki03-022.png",
-            "ssaki/ssaki03-022.png",
-            "ssaki/ssaki03-019.png",
-            "ssaki/ssaki03-019.png",
-            "ssaki/ssaki02-027.png",
-            "ssaki/ssaki02-027.png"
+            "karty/ssaki/ssaki01-018.png",
+            "karty/ssaki/ssaki01-018.png",
+            "karty/ssaki/ssaki01-026.png",
+            "karty/ssaki/ssaki01-026.png",
+            "karty/ssaki/ssaki02-022.png",
+            "karty/ssaki/ssaki02-022.png",
+            "karty/ssaki/ssaki02-023.png",
+            "karty/ssaki/ssaki02-023.png",
+            "karty/ssaki/ssaki03-025.png",
+            "karty/ssaki/ssaki03-025.png",
+            "karty/ssaki/ssaki01-027.png",
+            "karty/ssaki/ssaki01-027.png",
+            "karty/ssaki/ssaki02-021.png",
+            "karty/ssaki/ssaki02-021.png",
+            "karty/ssaki/ssaki02-026.png",
+            "karty/ssaki/ssaki02-026.png",
+            "karty/ssaki/ssaki03-024.png",
+            "karty/ssaki/ssaki03-024.png",
+            "karty/ssaki/ssaki03-022.png",
+            "karty/ssaki/ssaki03-022.png",
+            "karty/ssaki/ssaki03-019.png",
+            "karty/ssaki/ssaki03-019.png",
+            "karty/ssaki/ssaki02-027.png",
+            "karty/ssaki/ssaki02-027.png"
         ]
     },
     "Zioła": {
         "images": [
-            "ziola/ziola-006.png",
-            "ziola/ziola-006.png",
-            "ziola/ziola-043.png",
-            "ziola/ziola-043.png",
-            "ziola/ziola-048.png",
-            "ziola/ziola-048.png",
-            "ziola/ziola-022.png",
-            "ziola/ziola-022.png",
-            "ziola/ziola-018.png",
-            "ziola/ziola-018.png",
-            "ziola/ziola-037.png",
-            "ziola/ziola-037.png",
-            "ziola/ziola-016.png",
-            "ziola/ziola-016.png",
-            "ziola/ziola-026.png",
-            "ziola/ziola-026.png",
-            "ziola/ziola-009.png",
-            "ziola/ziola-009.png",
-            "ziola/ziola-023.png",
-            "ziola/ziola-023.png",
-            "ziola/ziola-013.png",
-            "ziola/ziola-013.png",
-            "ziola/ziola-042.png",
-            "ziola/ziola-042.png"
+            "karty/ziola/ziola-006.png",
+            "karty/ziola/ziola-006.png",
+            "karty/ziola/ziola-043.png",
+            "karty/ziola/ziola-043.png",
+            "karty/ziola/ziola-048.png",
+            "karty/ziola/ziola-048.png",
+            "karty/ziola/ziola-022.png",
+            "karty/ziola/ziola-022.png",
+            "karty/ziola/ziola-018.png",
+            "karty/ziola/ziola-018.png",
+            "karty/ziola/ziola-037.png",
+            "karty/ziola/ziola-037.png",
+            "karty/ziola/ziola-016.png",
+            "karty/ziola/ziola-016.png",
+            "karty/ziola/ziola-026.png",
+            "karty/ziola/ziola-026.png",
+            "karty/ziola/ziola-009.png",
+            "karty/ziola/ziola-009.png",
+            "karty/ziola/ziola-023.png",
+            "karty/ziola/ziola-023.png",
+            "karty/ziola/ziola-013.png",
+            "karty/ziola/ziola-013.png",
+            "karty/ziola/ziola-042.png",
+            "karty/ziola/ziola-042.png"
+        ]
+    },
+    "Motyle": {
+        "images": [
+            "karty/motyle/motyle-040.png",
+            "karty/motyle/motyle-040.png",
+            "karty/motyle/motyle-046.png",
+            "karty/motyle/motyle-046.png",
+            "karty/motyle/motyle-066.png",
+            "karty/motyle/motyle-066.png",
+            "karty/motyle/motyle-084.png",
+            "karty/motyle/motyle-084.png",
+            "karty/motyle/motyle-168.png",
+            "karty/motyle/motyle-168.png",
+            "karty/motyle/motyle-178.png",
+            "karty/motyle/motyle-178.png",
+            "karty/motyle/motyle-090.png",
+            "karty/motyle/motyle-090.png",
+            "karty/motyle/motyle-112.png",
+            "karty/motyle/motyle-112.png",
+            "karty/motyle/motyle-050.png",
+            "karty/motyle/motyle-050.png",
+            "karty/motyle/motyle-072.png",
+            "karty/motyle/motyle-072.png",
+            "karty/motyle/motyle-096.png",
+            "karty/motyle/motyle-096.png",
+            "karty/motyle/motyle-122.png",
+            "karty/motyle/motyle-122.png",
         ]
     }
 };
@@ -198,22 +230,24 @@ var category = {
  * for the category buttons. The name of the string must be the same as the 
  * category it corresponds to, it should contain the path to the background image. */
 var categoryBg = {
-    "Inicjały": "inicjaly/a.jpg",
-    "Atlas": "atlas/atlas-009.png",
-    "Mody": "mody/01.png",
-    "Ssaki": "ssaki/ssaki02-022.png",
-    "Zioła": "ziola/ziola-018.png"
+    "Inicjały": "karty/inicjaly/a.jpg",
+    "Atlas": "karty/atlas/atlas-009.png",
+    "Mody": "karty/mody/01.png",
+    "Ssaki": "karty/ssaki/ssaki02-022.png",
+    "Zioła": "karty/ziola/ziola-018.png",
+    "Motyle": "karty/motyle/motyle-046.png"
 };
 /* In the publicationImg object you can set the image of the publication that will 
  * be displayed on the final page of the game. The name of the string must be 
  * the same as the category it corresponds to, it should contain the path to the 
  * publication image. */
 var publicationImg = {
-    "Inicjały": "inicjaly/inicjaly-title.png",
-    "Atlas": "atlas/atlas-title.png",
-    "Mody": "mody/mody-title.png",
-    "Ssaki": "ssaki/ssaki-title.png",
-    "Zioła": "ziola/ziola-title.png"
+    "Inicjały": "images/titles/inicjaly-title.png",
+    "Atlas": "images/titles/atlas-title.png",
+    "Mody": "images/titles/mody-title.png",
+    "Ssaki": "images/titles/ssaki-title.png",
+    "Zioła": "images/titles/ziola-title.png",
+    "Motyle": "images/titles/motyle-title.png"
 };
 /* In the publicationInfo object you can set the name of the publication that will 
  * be displayed on the final page of the game. The name of the string must be 
@@ -223,7 +257,8 @@ var publicationInfo = {
     "Atlas":    "Atlas geograficzny ilustrowany Królestwa Polskiego",
     "Mody":     "Mody Paryzkie. Pismo illustrowane dla kobiet",
     "Ssaki":    "Mały atlas zwierząt ssących",
-    "Zioła":    "Atlas ziół leczniczych"
+    "Zioła":    "Atlas ziół leczniczych",
+    "Motyle":    "Motyle: 129 rysunków kolorowych"
 };
 /* In the fact object you can set the fact about the publication that will 
  * be displayed on the final page of the game. The name of the string must be 
@@ -233,5 +268,27 @@ var fact = {
     "Atlas":    "Atlas został wydany w&nbsp;latach 1903-1907 przez Józefa Michała Bazewicza. Stanowi cenne źródło wiadomości geograficznych, historycznych i&nbsp;gospodarczych. Publikację można zobaczyć w&nbsp;<a target='_blank' href='http://zbc.uz.zgora.pl/dlibra/doccontent?id=14646&from=publication'>Zielonogórskiej Bibliotece Cyfrowej</a>.",
     "Mody":     "Mody Paryzkie były wydawane w&nbsp;latach 1879-1883 w&nbsp;Warszawie. Periodyk przekazywał informacje dotyczące najnowszych trendów modowych, instruował jak wykonać samodzielnie stroje i&nbsp;dodatki, udzielał porad dotyczących dobrego wychowania. Zawierał także utwory literackie, drukowane odcinkami. Z&nbsp;wydawnictwem można się zapoznać w&nbsp;<a target='_blank' href='http://ebuw.uw.edu.pl/dlibra/publication?id=58154&tab=3'>E-Bibliotece Uniwersytetu Warszawskiego</a>.", 
     "Ssaki":    "Atlas został wydany w&nbsp;roku 1931. Zawiera rysunki i&nbsp;krótkie opisy ssaków, nie tylko z&nbsp;Polski, ale także z&nbsp;krajów egzotycznych. Z&nbsp;publikacją można się zapoznać dzięki <a target='_blank' href='http://www.wbc.poznan.pl/dlibra/publication?id=133115&tab=3'>Łowieckiej Bibliotece Cyfrowej Krzysztofa Daszkiewicza.</a>",
-    "Zioła":    "Atlas został wydany w&nbsp;roku 1925 przez Wydawnictwo M.&nbsp;Arcta w&nbsp;Warszawie. Zawiera 46 kolorowych ilustracji, pomagających w&nbsp;identyfikacji ponad 70 roślin leczniczych. Publikację można obejrzeć w&nbsp;<a target='_blank' href='http://kpbc.umk.pl/dlibra/doccontent?id=39570&from=publication'>Kujawsko-Pomorskiej Bibliotece Cyfrowej</a>."
+    "Zioła":    "Atlas został wydany w&nbsp;roku 1925 przez Wydawnictwo M.&nbsp;Arcta w&nbsp;Warszawie. Zawiera 46 kolorowych ilustracji, pomagających w&nbsp;identyfikacji ponad 70 roślin leczniczych. Publikację można obejrzeć w&nbsp;<a target='_blank' href='http://kpbc.umk.pl/dlibra/doccontent?id=39570&from=publication'>Kujawsko-Pomorskiej Bibliotece Cyfrowej</a>.",
+    "Motyle":   "Opracowanie autorstwa Bohdana Dyakowskiego zawiera 218 kolorowych rysunków motyli, poczwarek i&nbsp;gąsienic, zgromadzonych na&nbsp;18&nbsp;tablicach. Atlas został wydany w&nbsp;1906&nbsp;roku przez Wydawnictwo M.&nbsp;Arcta w&nbsp;Warszawie. Publikację można obejrzeć w&nbsp;<a target='_blank' href='http://rcin.org.pl/dlibra/doccontent?id=5058'>Repozytorium Cyfrowym Instytutów Naukowych</a>."
 };
+
+/* In this object you can specify the link to publication that will be available under publicationImg */
+var imgLink = {
+    "Inicjały": "http://www.polona.pl/item/8636953/16/",
+    "Atlas":    "http://zbc.uz.zgora.pl/dlibra/doccontent?id=14646&from=publication",
+    "Mody":     "http://ebuw.uw.edu.pl/dlibra/publication?id=58154&tab=3", 
+    "Ssaki":    "http://www.wbc.poznan.pl/dlibra/publication?id=133115&tab=3",
+    "Zioła":    "http://kpbc.umk.pl/dlibra/doccontent?id=39570&from=publication",
+    "Motyle":   "http://rcin.org.pl/dlibra/doccontent?id=5058"
+};
+
+
+
+
+
+
+
+
+
+
+
