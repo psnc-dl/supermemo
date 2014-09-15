@@ -16,14 +16,11 @@
             
         </div>
 		<div class="straightFont">Wybierz memorki</div>
-		<div>
-			<p class="inkerFont authorMadeByText">MADE BY<p>
-			<p class="inkerFont authorPCSSText">PCSS<p>
-		</div>
 		<div id="chosenAgeDiv" class="inkerFont">
 		</div>
         
         <script src="config.js"></script>
+        <script src="utils.js"></script>
         <script>
             /* This function creates category buttons depending on the config.js 
              * file and the age category selected on the previous page.*/
@@ -46,7 +43,9 @@
                 buttonCreator(categories[i]);
             }
 			/* display previously chosen age on page */	
-			document.getElementById("chosenAgeDiv").textContent = config[sessionStorage.getItem("age")].ageRange;
+			addAge();
+			/* add text 'Made by PCSS' to page body */
+			addAuthor();
         </script>
     </body>
 </html>

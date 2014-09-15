@@ -19,13 +19,10 @@
             <p class="straightFont ageText">Ile masz lat?</p>
         </div>  
         <div id="buttons">
-		<div>
-			<p class="inkerFont authorMadeByText">MADE BY<p>
-			<p class="inkerFont authorPCSSText">PCSS<p>
-		</div>
 
         </div>
         <script src="config.js"></script>
+        <script src="utils.js"></script>
         <script>
             /* This function blocks use of the enter key. By adding more 
              * if loops with different numbers you can block other keys. */
@@ -54,6 +51,8 @@
             for(var id in config) {
                 buttonCreator(id);
             }
+			/* add text 'Made by PCSS' to page body */
+			addAuthor();
         </script>
     </body>
 </html>

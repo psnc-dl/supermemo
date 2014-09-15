@@ -23,13 +23,10 @@
 				<div id="publicationImg"><a id="piLink" href=""><img id="pi" src="" alt="img"></a></div>
 				<button type="button" id="retry" class="inkerFont" onclick="location = 'index.html'">Zagraj jeszcze raz</button>
 			</div>   
-			<div>
-				<p class="inkerFont authorMadeByText">MADE BY<p>
-				<p class="inkerFont authorPCSSText">PCSS<p>
-			</div>
 		</div>
 		
 		<script src="config.js"></script>
+        <script src="utils.js"></script>
 		<script>
 			// load the publication name
 			$("#publicationName").text(publicationInfo[sessionStorage.getItem("category")]);
@@ -46,6 +43,9 @@
 			// (just to ensure it will not interfere with the next game)
 			// - probably not needed now
 			//sessionStorage.clear();
+
+			/* add text 'Made by PCSS' to page body */
+			addAuthor();
 		</script>
 	</body>
 </html>
