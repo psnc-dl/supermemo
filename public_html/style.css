@@ -232,3 +232,29 @@ a:active {
     font-size: 50px;
 
 }
+
+/* neon colours of title text */
+.neonPurple
+{
+	color: #9B0786;
+}
+.neonGreen
+{
+	color: #96D614;
+}
+.neonViolet
+{
+	color: #2A23D6;
+}
+.neonBlue
+{
+	color: #22DDD5;
+}
+.neonPink
+{
+	color: #FC06CB;
+}
+.neonOrange
+{
+	color: #FE7701;
+}
