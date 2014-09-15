@@ -8,15 +8,27 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <link href="style.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext" rel="stylesheet" type="text/css" >
+		<link href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     </head>
     <body class="backgroundLight">
         <div id="gameboard">
            
         </div> 
-        <div id="scores">
+        <div id="scores" class="inkerFont">
             <br>Próby: <span id="test4">0</span>
         </div>
+		<div>
+			<p class="inkerFont authorMadeByText">MADE BY<p>
+			<p class="inkerFont authorPCSSText">PCSS<p>
+		</div>
+		<div id="chosenAgeDiv" class="inkerFont">
+		</div>
         <script src="config.js"></script>
         <script src="thegame.js"></script>
+		<script>
+			/* display previously chosen age on page */	
+			document.getElementById("chosenAgeDiv").textContent = config[sessionStorage.getItem("age")].ageRange;
+        </script>
     </body>
 </html>

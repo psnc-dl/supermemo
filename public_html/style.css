@@ -1,22 +1,20 @@
+/* this CSS rule specifies the font and where it can be found */
+/*
 @font-face {
     font-family: 'poiretone';
     src: url('PoiretOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+*/
 
 body {
     width: 100%;
     /* background-color: #fcefd1; */
     margin: 0px;
     /* border-top: 7px solid #7FB1B0; */
-    font-family: 'lobster';
-    font-weight: lighter;
 }
 
-h1 {
-    font-size: 50px;
-}
 
 .header {
     margin-left: auto;
@@ -31,13 +29,6 @@ h1 {
     text-align: center;
 }
 
-.log-in h2 {
-    font-size: 42px;
-}
-
-.log-in p {
-    font-size: 40px;
-}
 
 #buttons{
     width: 900px;
@@ -67,9 +58,6 @@ button {
     border: 0px;
     border-radius: 8px;
     padding: 0px;
-    font-family: 'lobster';
-    font-size: 35px;
-    font-weight: lighter;
     color: black;
 }
 
@@ -77,8 +65,6 @@ button {
     position: fixed;
     top: 47%;
     left: 48.3%;
-    font-size: 30px;
-    font-weight: lighter;
 }
 
 #retry {
@@ -90,9 +76,6 @@ button {
     background-color: #7FB1B0;
     border: 0px;
     border-radius: 8px;
-    font-family: 'lobster';
-    font-size: 35px;
-    font-weight: lighter;
     color: black;
 }
 
@@ -142,14 +125,7 @@ img {
 }
 
 #message h2 {
-    font-size: 34px;
-    font-weight: lighter;
     text-align: center;
-}
-
-#message p {
-    font-size: 26px;
-    font-weight: bold;
 }
 
 #pubImageHolder {
@@ -219,4 +195,40 @@ a:active {
 .backgroundBlue
 {
 	background-image: url('images/backgroundBlue.png');
+}
+
+/* texts and fonts */
+/* *************** */
+.inkerFont
+{
+	font-family: 'Marck Script', cursive;
+}
+
+.straightFont
+{
+	font-family: 'Oxygen', serif;
+	text-transform: uppercase;
+}
+
+.titleText
+{
+    font-size: 20px;
+}
+
+.ageText
+{
+    font-size: 40px;
+
+}
+
+.authorMadeByText
+{
+    font-size: 20px;
+
+}
+
+.authorPCSSText
+{
+    font-size: 50px;
+
 }

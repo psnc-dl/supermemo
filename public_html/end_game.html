@@ -8,19 +8,25 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<link href="style.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext" rel="stylesheet" type="text/css" >
+		<link href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	</head>
     <body class="backgroundBlue">
-		<div class="header"><h1>RetroMemo</h1></div>
 		<div class="container">
-			<div id="message">
-				<h2>Gratulacje!</h2>
-				<p>Udało Ci się znaleźć wszystkie pary w <span id="tries"></span> próbach. <br><br>Obrazki pochodziły z publikacji: <span id="publicationName"></span>.</p>
+			<div id="message" class="straightFont">
+				<h2>Gratulacje</h2>
+				<p>Udało Ci się znaleźć wszystkie pary w <span id="tries"></span> próbach.</p> 
+				<p>Obrazki pochodziły z publikacji: <span id="publicationName"></span></p>
 				<p id="fact"></p>
 			</div>
 			<div id="pubImageHolder">
 				<div id="publicationImg"><a id="piLink" href=""><img id="pi" src="" alt="img"></a></div>
-				<button type="button" id="retry" onclick="location = 'index.html'">Spróbuj jeszcze raz</button>
+				<button type="button" id="retry" class="inkerFont" onclick="location = 'index.html'">Zagraj jeszcze raz</button>
 			</div>   
+			<div>
+				<p class="inkerFont authorMadeByText">MADE BY<p>
+				<p class="inkerFont authorPCSSText">PCSS<p>
+			</div>
 		</div>
 		
 		<script src="config.js"></script>

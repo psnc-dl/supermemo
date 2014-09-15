@@ -14,21 +14,21 @@
  * the actual size of the image. */
 var config = {
     "five": {
-        "ageRange": "3 - 5 lat",
+        "ageRange": "3+",
         "cardCount": 12,
         "boardWidth": 4,
         "boardHeight": 3,
         "cardSize": 155
     },
     "nine": {
-        "ageRange": "6 - 9 lat",
+        "ageRange": "6+",
         "cardCount": 16,
         "boardWidth": 4,
         "boardHeight": 4,
         "cardSize": 155
     },
     "overNine": {
-        "ageRange": "10+ lat",
+        "ageRange": "10+",
         "cardCount": 24,
         "boardWidth": 6,
         "boardHeight": 4,

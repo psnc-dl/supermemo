@@ -8,16 +8,21 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <link href="style.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext" rel="stylesheet" type="text/css" >
+		<link href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     </head>
     <body class="backgroundLight">
         <div class="header">
-            <h1>RetroMemo</h1>
+            <h1 class="straightFont titleText">RETRO MEMO</h1>
         </div>
         <div class="log-in">
-            <h2>Witaj!</h2>
-            <p>Ile masz lat?</p>
+            <p class="straightFont ageText">Ile masz lat?</p>
         </div>  
         <div id="buttons">
+		<div>
+			<p class="inkerFont authorMadeByText">MADE BY<p>
+			<p class="inkerFont authorPCSSText">PCSS<p>
+		</div>
 
         </div>
         <script src="config.js"></script>
@@ -35,7 +40,7 @@
                 var rangeName = config[id];
                 var div = document.createElement("div");
                 var t = document.createTextNode(rangeName.ageRange);
-				div.setAttribute("class", "ageDiv");
+				div.setAttribute("class", "ageDiv inkerFont");
                 btn.setAttribute("type", "button");
                 btn.setAttribute("id", id);
                 /* This onclick event passes the age parameter to the session 
