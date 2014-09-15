@@ -184,9 +184,13 @@ a:active {
     color: black;
 }
 
-/* this is class for body markup */
+/* this is class for <body> element */
 .backgroundLight
 {
+	/* this is a way to make very nice CSS3 stripes, */
+	/* but browser performance is not good;  */
+	/* setting background colour allows for fallback to single colour background when CSS feature is not available */
+	/*
 	background-color: #DDDDD4;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .8)), color-stop(.5, transparent), to(transparent));
 	background-image: -moz-linear-gradient(rgba(255, 255, 255, .8) 50%, transparent 50%, transparent);
@@ -195,5 +199,24 @@ a:active {
 	-webkit-background-size: 4px 4px;
 	-moz-background-size: 4px 4px;
 	background-size: 4px 4px;
+	*/
+	
+	/* this is another way, not so compatible, but faster */
+	/* unfortunately there are sometimes artifacts in iceweasel and chrome	*/
+	/* (example is for blue background)
+	/*
+	background: repeating-linear-gradient(
+	  #598094,
+	  #598094 2px,
+	  #9DB6CA 2px,
+	  #9DB6CA 4px
+	);
+	*/
+
+	background-image: url('images/backgroundLight.png');
 }
 
+.backgroundBlue
+{
+	background-image: url('images/backgroundBlue.png');
+}
