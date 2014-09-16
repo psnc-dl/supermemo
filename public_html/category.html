@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>RetroMemo</title>
-        <meta charset="UTF-8">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <link href="style.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<head>
+		<title>RetroMemo</title>
+		<meta charset="UTF-8">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link href="style.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<link href="http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext" rel="stylesheet" type="text/css" >
 		<link href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    </head>
-    <body class="backgroundLight">
-        <div id="buttons">
-            
-        </div>
+	</head>
+	<body class="backgroundLight">
+		<div id="buttons">
+			
+		</div>
 		<div class="straightFont">Wybierz memorki</div>
 		<div id="chosenAgeDiv" class="inkerFont">
 		</div>
-        
-        <script src="config.js"></script>
-        <script src="utils.js"></script>
-        <script>
-            /* This function creates category buttons depending on the config.js 
-             * file and the age category selected on the previous page.*/
-            var buttonCreator = function(id) {
-                var btn = document.createElement("button");
-                var bgImg = categoryBg[id];
-                btn.setAttribute("type", "button");
-                btn.setAttribute("id", id);
-                /* This onclick event passes the category parameter to the session 
-                 * storage so it can be accessed on further pages. */
-                btn.setAttribute("onclick", "sessionStorage.setItem('category', id); location = 'the_game.html';");                
-                document.getElementById("buttons").appendChild(btn);
-                $(btn).css('background-image', 'url(' + bgImg + ')');
-            };
-            /* This line gets the array containing the categories list for each 
-             * of the age categories. */
-            var categories = ageCategories[sessionStorage.getItem("age")];
-            
-            for(i = 0; i < categories.length; i++) {
-                buttonCreator(categories[i]);
-            }
-			/* display previously chosen age on page */	
+		
+		<script src="config.js"></script>
+		<script src="utils.js"></script>
+		<script>
+			/* This function creates category buttons depending on the config.js 
+			 * file and the age category selected on the previous page.*/
+			var buttonCreator = function(id) {
+				var btn = document.createElement("button");
+				var bgImg = categoryBg[id];
+				btn.setAttribute("type", "button");
+				btn.setAttribute("id", id);
+				/* This onclick event passes the category parameter to the session 
+				 * storage so it can be accessed on further pages. */
+				btn.setAttribute("onclick", "sessionStorage.setItem('category', id); location = 'the_game.html';");				
+				document.getElementById("buttons").appendChild(btn);
+				$(btn).css('background-image', 'url(' + bgImg + ')');
+			};
+			// obtain the array containing the categories list for each of the age categories
+			var categories = ageCategories[sessionStorage.getItem("age")];
+			
+			for(i = 0; i < categories.length; i++) {
+				buttonCreator(categories[i]);
+			}
+			// display previously chosen age on page
 			addAge();
-			/* add text 'Made by PCSS' to page body */
+			// add text 'Made by PCSS' to page body
 			addAuthor();
-        </script>
-    </body>
+		</script>
+	</body>
 </html>

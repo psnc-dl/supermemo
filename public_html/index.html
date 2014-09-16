@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>RetroMemo</title>
-        <meta charset="UTF-8">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <link href="style.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<head>
+		<title>RetroMemo</title>
+		<meta charset="UTF-8">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link href="style.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<link href="http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext" rel="stylesheet" type="text/css" >
 		<link href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    </head>
-    <body class="backgroundLight">
-        <div class="header">
+	</head>
+	<body class="backgroundLight">
+		<div class="header">
 			<h1 class="straightFont titleText"><span class="neonPurple">R</span><span class="neonGreen">E</span><span class="neonViolet">T</span><span class="neonBlue">R</span><span class="neonPink">O</span> <span class="neonGreen">M</span><span class="neonViolet">E</span><span class="neonPurple">M</span><span class="neonOrange">O</span></h1>
-        </div>
-        <div class="log-in">
-            <p class="straightFont ageText">Ile masz lat?</p>
-        </div>  
-        <div id="buttons">
-
-        </div>
-        <script src="config.js"></script>
-        <script src="utils.js"></script>
-        <script>
-            /* This function blocks use of the enter key. By adding more 
-             * if loops with different numbers you can block other keys. */
-            document.onkeydown = function (e) {
-                    if(e.which === 13){
-                            return false;
-                    }
-            };
-            /* This function creates age category buttons depending on the config.js file. */
-            var buttonCreator = function(id) {
-                var btn = document.createElement("button");
-                var rangeName = config[id];
-                var div = document.createElement("div");
-                var t = document.createTextNode(rangeName.ageRange);
+		</div>
+		<div class="log-in">
+			<p class="straightFont ageText">Ile masz lat?</p>
+		</div>  
+		<div id="buttons">
+		
+		</div>
+		<script src="config.js"></script>
+		<script src="utils.js"></script>
+		<script>
+			/* This function blocks use of the enter key. By adding more 
+			 * if loops with different numbers you can block other keys. */
+			document.onkeydown = function (e) {
+				if(e.which === 13){
+					return false;
+				}
+			};
+			/* This function creates age category buttons depending on the config.js file. */
+			var buttonCreator = function(id) {
+				var btn = document.createElement("button");
+				var rangeName = config[id];
+				var div = document.createElement("div");
+				var t = document.createTextNode(rangeName.ageRange);
 				div.setAttribute("class", "ageDiv inkerFont");
-                btn.setAttribute("type", "button");
-                btn.setAttribute("id", id);
-                /* This onclick event passes the age parameter to the session 
-                 * storage so it can be accessed on further pages. */
-                btn.setAttribute("onclick", "sessionStorage.setItem('age', id); location = 'category.html';");
-                document.getElementById("buttons").appendChild(btn);
-                btn.appendChild(div);                
-                div.appendChild(t);                
-            };
-            
-            for(var id in config) {
-                buttonCreator(id);
-            }
-			/* add text 'Made by PCSS' to page body */
+				btn.setAttribute("type", "button");
+				btn.setAttribute("id", id);
+				/* This onclick event passes the age parameter to the session 
+				 * storage so it can be accessed on further pages. */
+				btn.setAttribute("onclick", "sessionStorage.setItem('age', id); location = 'category.html';");
+				document.getElementById("buttons").appendChild(btn);
+				btn.appendChild(div);
+				div.appendChild(t);
+			};
+			
+			for(var id in config) {
+				buttonCreator(id);
+			}
+			// add text 'Made by PCSS' to page body
 			addAuthor();
-        </script>
-    </body>
+		</script>
+	</body>
 </html>

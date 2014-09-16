@@ -1,163 +1,163 @@
 /* this CSS rule specifies the font and where it can be found */
 /*
 @font-face {
-    font-family: 'poiretone';
-    src: url('PoiretOne-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'poiretone';
+	src: url('PoiretOne-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 */
 
 body {
-    width: 100%;
-    /* background-color: #fcefd1; */
-    margin: 0px;
-    /* border-top: 7px solid #7FB1B0; */
+	width: 100%;
+	/* background-color: #fcefd1; */
+	margin: 0px;
+	/* border-top: 7px solid #7FB1B0; */
 }
 
 
 .header {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 .log-in{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 
 #buttons{
-    width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    text-align: center;
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
 }
 
 button:focus {outline:0;}
 
 .log-in #buttons {
-    display: inline-block;
+	display: inline-block;
 }
 
 .ageDiv {
-    margin-right: 2px;
-    text-align: center;
+	margin-right: 2px;
+	text-align: center;
 }
 
 
 button {
-    margin: 30px 10px 10px 10px;
-    width: 155px;
-    height: 155px;
-    background-color: #7FB1B0;
-    border: 0px;
-    border-radius: 8px;
-    padding: 0px;
-    color: black;
+	margin: 30px 10px 10px 10px;
+	width: 155px;
+	height: 155px;
+	background-color: #7FB1B0;
+	border: 0px;
+	border-radius: 8px;
+	padding: 0px;
+	color: black;
 }
 
 #scores {
-    position: fixed;
-    top: 47%;
-    left: 48.3%;
+	position: fixed;
+	top: 47%;
+	left: 48.3%;
 }
 
 #retry {
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    height: 155px;
-    background-color: #7FB1B0;
-    border: 0px;
-    border-radius: 8px;
-    color: black;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	height: 155px;
+	background-color: #7FB1B0;
+	border: 0px;
+	border-radius: 8px;
+	color: black;
 }
 
 #gameboard {
-    position: fixed;
-    top: 50%;
-    left: 50%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
 }
 
 .card {
-    position: relative;
-    background-color: #7FB1B0;
-    border-radius: 8px;
-    margin: 5px;
-    float: left;
+	position: relative;
+	background-color: #7FB1B0;
+	border-radius: 8px;
+	margin: 5px;
+	float: left;
 }
 
 img {
-    border-radius: 8px;
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;    
+	border-radius: 8px;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;	
 }
 
 .covered {
-    opacity: 0;
+	opacity: 0;
 }
 
 .container {
-    position: fixed;
-    width: 1075px;
-    height: 500px;
-    top: 50%;
-    left: 50%;
-    margin-top: -250px;
-    margin-left: -450px;
+	position: fixed;
+	width: 1075px;
+	height: 500px;
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -450px;
 }
 
 #message {
-    width: 610px;
-    margin-top: -20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    float: left;
+	width: 610px;
+	margin-top: -20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	float: left;
 }
 
 #message h2 {
-    text-align: center;
+	text-align: center;
 }
 
 #pubImageHolder {
-    width: 400px;
-    margin: 10px;
-    float: right;
+	width: 400px;
+	margin: 10px;
+	float: right;
 }
 
 #publicationImg {
-    width: 300px;
-    height: 300px;
+	width: 300px;
+	height: 300px;
 }
 
 #publicationImg img {
-    width: 300px;
-    height: 300px;
+	width: 300px;
+	height: 300px;
 }
 
 a:link {
-    color: black;
+	color: black;
 }
 
 a:visited {
-    color: black;
+	color: black;
 }
 
 a:hover {
-    color: black;
+	color: black;
 }
 
 a:active {
-    color: black;
+	color: black;
 }
 
 /* this is class for <body> element */
@@ -212,25 +212,22 @@ a:active {
 
 .titleText
 {
-    font-size: 20px;
+	font-size: 20px;
 }
 
 .ageText
 {
-    font-size: 40px;
-
+	font-size: 40px;
 }
 
 .authorMadeByText
 {
-    font-size: 20px;
-
+	font-size: 20px;
 }
 
 .authorPCSSText
 {
-    font-size: 50px;
-
+	font-size: 50px;
 }
 
 /* neon colours of title text */
