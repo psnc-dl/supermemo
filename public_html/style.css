@@ -19,13 +19,9 @@ body
 	width: 100%;
 	margin: 0px;
 	font-size: 60%;
+	color: #403F3D !important;
 }
 
-
-button:focus
-{
-	outline:0;
-}
 
 #authorMadeByText
 {
@@ -53,25 +49,32 @@ button:focus
 
 /* link styling */
 /* don't colour links */
-a:link
+a:link, a:visited, a:hover, a:active
 {
-	color: black;
+	color: #403F3D;
+	outline: none;
+}
+/* iceweasel, don't change default colour of buttons */
+button
+{
+	color: #403F3D;
+}
+/* don't make dotted line around buttons */
+button:link, button:visited, button:hover, button:active, button:focus
+{
+	color: #403F3D;
+	outline: 0;
+	border: none;
+}
+:focus 
+{
+	outline:none;
+}
+::-moz-focus-inner
+{
+	border:0;
 }
 
-a:visited
-{
-	color: black;
-}
-
-a:hover
-{
-	color: black;
-}
-
-a:active
-{
-	color: black;
-}
 
 /* additionally to not colouring links, no underscore */ 
 .noLinkIndicator
@@ -151,30 +154,13 @@ a:active
 }
 
 
-/* texts and fonts */
-/* *************** */
-.inkerFont
-{
-}
-.inkerFontWide
-{
-	font-family: 'Shadows Into Light', cursive;
-}
-.titleFont
-{
-}
-.textFont
-{
-}
-
-
 /* text-specific styling */
 /* ********************* */
 .ageOption
 {
 	font-family: 'Shadows Into Light', cursive;
 
-	font-size: 6em;
+	font-size: 8em;
 }
 
 #gameTitleText
@@ -199,7 +185,7 @@ a:active
 {
 	font-family: 'Shadows Into Light', cursive;
 
-	font-size: 4em;
+	font-size: 2em;
 	text-transform: uppercase;
 	letter-spacing: 0.20em;
 }
@@ -326,9 +312,24 @@ a:active
 
 .ageOption
 {
-	padding: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
 	border: 0px;
 	background: none;
+}
+#ageQuestionText
+{
+	width: 14%;
+	margin-left: 43%;
+	margin-right: 43%;
+	padding: 0.3em;
+	
+	margin-top: 10%;
+	
+	background: white;
+   -moz-box-shadow:    inset 0 0 4px #aaaaaa;
+   -webkit-box-shadow: inset 0 0 4px #aaaaaa;
+   box-shadow:         inset 0 0 4px #aaaaaa;
 }
 
 /* category.html */
