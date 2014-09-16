@@ -9,8 +9,8 @@
 }
 */
 @import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:100,400&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,400&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:100,400,700&subset=latin,latin-ext);
 
 /* general settings */
 /* **************** */
@@ -21,10 +21,6 @@ body
 	font-size: 60%;
 }
 
-.header
-{
-	text-align: center;
-}
 
 button:focus
 {
@@ -187,7 +183,7 @@ a:active
 #gameTitleText
 {
 	font-size: 4em;
-	letter-spacing: 0.025em;
+	letter-spacing: 0.04em;
 	font-weight: 100;
 }
 #congratulationsText
@@ -277,6 +273,21 @@ a:active
 /* ******************************** */
 
 /* index.html */
+#titleDiv
+{
+	text-align: center;
+	margin-top: -5.5%;
+	margin-left: -2.5%;
+}
+
+#titlePicture
+{
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	text-align: center;
+}
+
 .choosingAge
 {
 	width: 100%;
