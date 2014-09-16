@@ -1,6 +1,7 @@
 /* this CSS rule specifies the font and where it can be found */
 /*
-@font-face {
+@font-face
+{
 	font-family: 'poiretone';
 	src: url('PoiretOne-Regular.ttf') format('truetype');
 	font-weight: normal;
@@ -11,159 +12,44 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:100,400&subset=latin,latin-ext);
 
-body {
+/* general settings */
+/* **************** */
+body
+{
 	width: 100%;
-	/* background-color: #fcefd1; */
 	margin: 0px;
-	/* border-top: 7px solid #7FB1B0; */
 	font-size: 60%;
 }
 
-
-.header {
-	/* margin-left: auto;
-	margin-right: auto;*/
+.header
+{
 	text-align: center;
 }
 
-.logIn{
-	width: 50%;
-	/* margin-left: auto;
-	margin-right: auto; */
-	text-align: center;
+button:focus
+{
+	outline:0;
 }
 
-
-#buttons{
-	width: 900px;
-	/* margin-left: auto;
-	margin-right: auto; */
-	display: block;
-	text-align: center;
-}
-
-button:focus {outline:0;}
-
-.logIn #buttons {
-	display: inline-block;
-}
-
-.ageDiv {
-	margin-right: 2px;
-	text-align: center;
-}
-
-
-button {
-	margin: 30px 10px 10px 10px;
-	width: 155px;
-	height: 155px;
-	background-color: #7FB1B0;
-	border: 0px;
-	border-radius: 8px;
-	padding: 0px;
-	color: black;
-}
-
-#scores {
-	position: fixed;
-	top: 47%;
-	left: 48.3%;
-}
-
-/*
-#retry {
-	margin-top: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 300px;
-	height: 155px;
-	background-color: #7FB1B0;
-	border: 0px;
-	border-radius: 8px;
-	color: black;
-}
-*/
-
-#gameboard {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-}
-
-.card {
-	position: relative;
-	background-color: #7FB1B0;
-	border-radius: 8px;
-	margin: 5px;
-	float: left;
-}
-
-.cardImg {
-	border-radius: 8px;
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;	
-}
-
-.covered {
-	opacity: 0;
-}
-
-.container {
-	position: fixed;
-	width: 1075px;
-	height: 500px;
-	top: 50%;
-	left: 50%;
-	margin-top: -250px;
-	margin-left: -450px;
-}
-
-#message {
-	width: 610px;
-	margin-top: -20px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	float: left;
-}
-
-#message h2 {
-	text-align: center;
-}
-
-#pubImageHolder {
-	width: 400px;
-	margin: 10px;
-	float: right;
-}
-
-#publicationImg {
-	width: 300px;
-	height: 300px;
-}
-
-#publicationImg img {
-	width: 300px;
-	height: 300px;
-}
-
+/* link styling */
 /* don't colour links */
-a:link {
+a:link
+{
 	color: black;
 }
 
-a:visited {
+a:visited
+{
 	color: black;
 }
 
-a:hover {
+a:hover
+{
 	color: black;
 }
 
-a:active {
+a:active
+{
 	color: black;
 }
 
@@ -173,6 +59,7 @@ a:active {
 	text-decoration: none;		
 }
 
+/* background styling */
 /* this is class for <body> element */
 .backgroundLight
 {
@@ -210,6 +97,40 @@ a:active {
 	background-image: url('images/backgroundBlue.png');
 }
 
+
+/* game styling */
+/* ************ */
+#gameboard
+{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
+.card
+{
+	position: relative;
+	background-color: #7FB1B0;
+	border-radius: 8px;
+	margin: 5px;
+	float: left;
+}
+
+.cardImg
+{
+	border-radius: 8px;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;	
+}
+
+.covered
+{
+	opacity: 0;
+}
+
+
 /* texts and fonts */
 /* *************** */
 .inkerFont
@@ -231,7 +152,14 @@ a:active {
 	text-transform: uppercase;
 }
 
-/* piece of text-specific styling */
+
+/* text-specific styling */
+/* ********************* */
+.ageOption
+{
+	font-size: 6em;
+}
+
 #gameTitleText
 {
 	font-size: 4em;
@@ -287,11 +215,14 @@ a:active {
 }
 #playAgainText
 {
+	font-size: 3em;
 	letter-spacing: 0.25em;
 	text-transform: uppercase;
 }
 
+
 /* neon colours of title text */
+/* ************************** */
 .neonPurple
 {
 	color: #9B0786;
@@ -317,7 +248,51 @@ a:active {
 	color: #FE7701;
 }
 
-/* positioning elements on page */
+
+/* positioning and styling elements */
+/* ******************************** */
+
+/* index.html */
+.choosingAge
+{
+	width: 100%;
+	text-align: center;
+}
+
+.ageOption
+{
+	padding: 50px;
+	border: 0px;
+	background: none;
+}
+
+/* category.html */
+#categoryOptions
+{
+	display: block;
+}
+
+.categoryOption
+{
+	margin: 30px 10px 10px 10px;
+	width: 155px;
+	height: 155px;
+	background-color: #7FB1B0;
+	border: 0px;
+	border-radius: 8px;
+	padding: 0px;
+	color: black;
+}
+
+/* the_game.html */
+#scores
+{
+	position: fixed;
+	top: 47%;
+	left: 48.3%;
+}
+
+/* end_game.html */
 #authorMadeByText
 {
 	margin: -0.3em;
@@ -334,7 +309,11 @@ a:active {
 	position: absolute;
 }
 
-/* decorative images */
+#playAgainText
+{
+	text-align: center;
+}
+
 #cloudsTop
 {
 	top: 0px;	
@@ -350,3 +329,29 @@ a:active {
 	left: 0px;
 	position: absolute;
 }
+
+#message
+{
+	text-align: center;
+	width: 100%;
+}
+
+#pubImageHolder
+{
+	width: 400px;
+	margin: 10px;
+	float: right;
+}
+
+#publicationImg
+{
+	width: 300px;
+	height: 300px;
+}
+
+#publicationImg img
+{
+	width: 300px;
+	height: 300px;
+}
+

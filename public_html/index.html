@@ -13,10 +13,10 @@
 		<div class="header">
 			<h1 class="titleFont" id="gameTitleText"><span class="neonPurple">R</span><span class="neonGreen">E</span><span class="neonViolet">T</span><span class="neonBlue">R</span><span class="neonPink">O</span> <span class="neonGreen">M</span><span class="neonViolet">E</span><span class="neonPurple">M</span><span class="neonOrange">O</span></h1>
 		</div>
-		<div class="logIn">
+		<div class="choosingAge">
 			<p class="inkerFont" id="ageQuestionText">Ile masz lat?</p>
+			<div id="ageOptions">
 		</div>  
-		<div id="buttons">
 		
 		</div>
 		<script src="config.js"></script>
@@ -35,13 +35,14 @@
 				var rangeName = config[id];
 				var div = document.createElement("div");
 				var t = document.createTextNode(rangeName.ageRange);
-				div.setAttribute("class", "ageDiv inkerFont");
+				div.setAttribute("class", "inkerFont");
+				btn.setAttribute("class", "ageOption");
 				btn.setAttribute("type", "button");
 				btn.setAttribute("id", id);
 				/* This onclick event passes the age parameter to the session 
 				 * storage so it can be accessed on further pages. */
 				btn.setAttribute("onclick", "sessionStorage.setItem('age', id); location = 'category.html';");
-				document.getElementById("buttons").appendChild(btn);
+				document.getElementById("ageOptions").appendChild(btn);
 				btn.appendChild(div);
 				div.appendChild(t);
 			};

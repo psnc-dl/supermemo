@@ -9,7 +9,7 @@
 		<link href="style.css" rel="stylesheet">
 	</head>
 	<body class="backgroundLight">
-		<div id="buttons">
+		<div id="categoryOptions">
 			
 		</div>
 		<div class="inkerFont" id="chooseCategoryText">Wybierz memorki</div>
@@ -25,11 +25,12 @@
 				var btn = document.createElement("button");
 				var bgImg = categoryBg[id];
 				btn.setAttribute("type", "button");
+				btn.setAttribute("class", "categoryOption");
 				btn.setAttribute("id", id);
 				/* This onclick event passes the category parameter to the session 
 				 * storage so it can be accessed on further pages. */
 				btn.setAttribute("onclick", "sessionStorage.setItem('category', id); location = 'the_game.html';");				
-				document.getElementById("buttons").appendChild(btn);
+				document.getElementById("categoryOptions").appendChild(btn);
 				$(btn).css('background-image', 'url(' + bgImg + ')');
 			};
 			// obtain the array containing the categories list for each of the age categories
