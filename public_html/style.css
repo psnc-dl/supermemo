@@ -9,7 +9,7 @@
 }
 */
 @import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,400&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,700&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:100,400,700&subset=latin,latin-ext);
 
 /* general settings */
@@ -155,7 +155,6 @@ a:active
 /* *************** */
 .inkerFont
 {
-	font-family: 'Shadows Into Light', cursive;
 }
 .inkerFontWide
 {
@@ -163,13 +162,9 @@ a:active
 }
 .titleFont
 {
-	font-family: 'Josefin Sans', sans-serif;
-	text-transform: uppercase;
 }
 .textFont
 {
-	font-family: 'Inconsolata';
-	text-transform: uppercase;
 }
 
 
@@ -177,64 +172,99 @@ a:active
 /* ********************* */
 .ageOption
 {
+	font-family: 'Shadows Into Light', cursive;
+
 	font-size: 6em;
 }
 
 #gameTitleText
 {
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+
 	font-size: 4em;
 	letter-spacing: 0.04em;
-	font-weight: 100;
+	font-weight: 300;
 }
 #congratulationsText
 {
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+
 	font-size: 2em;
 	letter-spacing: 0.025em;
 	font-weight: 700;
 }
 #ageQuestionText
 {
+	font-family: 'Shadows Into Light', cursive;
+
 	font-size: 4em;
 	text-transform: uppercase;
 	letter-spacing: 0.20em;
 }
 #chooseCategoryText
 {
+	font-family: 'Shadows Into Light', cursive;
+
 	font-size: 2em;
 	letter-spacing: 0.25em;
 	text-transform: uppercase;
 }
 #chosenAgeText
 {
+	font-family: 'Shadows Into Light', cursive;
+
 	font-size: 7em;
 }
 #authorMadeByText
 {
+	font-family: 'Shadows Into Light', cursive;
+
 	font-size: 2.8em;
 	text-transform: uppercase;
 }
 #authorPCSSText
 {
+	font-family: 'Shadows Into Light', cursive;
+
 	font-size: 5em;
+}
+#scores
+{
+	font-family: 'Shadows Into Light', cursive;
+
+	font-size: 4em;
 }
 #triesText
 {
+	font-family: 'Inconsolata';
+	text-transform: uppercase;
+
 	font-size: 2em;
 	font-weight: 700; 
 	letter-spacing: 0.20em;
 }
 #fromText
 {
+	font-family: 'Inconsolata';
+	text-transform: uppercase;
+
 	font-size: 2em;
 	letter-spacing: 0.20em;
 }
 #factText
 {
+	font-family: 'Inconsolata';
+	text-transform: uppercase;
+
 	font-size: 2em;
 	letter-spacing: 0.20em;
 }
 #playAgainText
 {
+	font-family: 'Shadows Into Light', cursive;
+
 	font-size: 3em;
 	letter-spacing: 0.25em;
 	text-transform: uppercase;
@@ -277,7 +307,7 @@ a:active
 {
 	text-align: center;
 	margin-top: -5.5%;
-	margin-left: -2.5%;
+	margin-left: -2%;
 }
 
 #titlePicture
@@ -324,7 +354,7 @@ a:active
 {
 	position: fixed;
 	top: 47%;
-	left: 48.3%;
+	left: 50%;
 }
 
 /* end_game.html */

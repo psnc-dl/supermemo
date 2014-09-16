@@ -17,7 +17,7 @@
 			<h1 class="titleFont" id="gameTitleText"><span class="neonPurple">R</span><span class="neonGreen">E</span><span class="neonViolet">T</span><span class="neonBlue">R</span><span class="neonPink">O</span> <span class="neonGreen">M</span><span class="neonViolet">E</span><span class="neonPurple">M</span><span class="neonOrange">O</span></h1>
 		</div>
 		<div class="choosingAge">
-			<p class="inkerFont" id="ageQuestionText">Ile masz lat?</p>
+			<p id="ageQuestionText">Ile masz lat?</p>
 			<div id="ageOptions">
 		</div>  
 		
@@ -37,7 +37,6 @@
 				var rangeName = config[id];
 				var div = document.createElement("div");
 				var t = document.createTextNode(rangeName.ageRange);
-				div.setAttribute("class", "inkerFont");
 				btn.setAttribute("class", "ageOption");
 				btn.setAttribute("type", "button");
 				btn.setAttribute("id", id);
