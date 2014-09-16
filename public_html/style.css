@@ -193,7 +193,7 @@ button:link, button:visited, button:hover, button:active, button:focus
 {
 	font-family: 'Shadows Into Light', cursive;
 
-	font-size: 2em;
+	font-size: 2.5em;
 	letter-spacing: 0.25em;
 	text-transform: uppercase;
 }
@@ -349,6 +349,13 @@ button:link, button:visited, button:hover, button:active, button:focus
 }
 
 /* category.html */
+#categoryBox
+{
+	width: 100%;
+	position: absolute;
+	bottom: 35%;
+	text-align: center;
+}
 #categoryOptions
 {
 	display: block;
