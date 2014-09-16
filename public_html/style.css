@@ -16,34 +16,35 @@ body {
 	/* background-color: #fcefd1; */
 	margin: 0px;
 	/* border-top: 7px solid #7FB1B0; */
+	font-size: 60%;
 }
 
 
 .header {
-	margin-left: auto;
-	margin-right: auto;
+	/* margin-left: auto;
+	margin-right: auto;*/
 	text-align: center;
 }
 
-.log-in{
+.logIn{
 	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
+	/* margin-left: auto;
+	margin-right: auto; */
 	text-align: center;
 }
 
 
 #buttons{
 	width: 900px;
-	margin-left: auto;
-	margin-right: auto;
+	/* margin-left: auto;
+	margin-right: auto; */
 	display: block;
 	text-align: center;
 }
 
 button:focus {outline:0;}
 
-.log-in #buttons {
+.logIn #buttons {
 	display: inline-block;
 }
 
@@ -98,7 +99,7 @@ button {
 	float: left;
 }
 
-img {
+.cardImg {
 	border-radius: 8px;
 	display: block;
 	position: absolute;
@@ -233,55 +234,55 @@ a:active {
 /* piece of text-specific styling */
 #gameTitleText
 {
-	font-size: 40px;
+	font-size: 4em;
 	letter-spacing: 0.025em;
 	font-weight: 100;
 }
 #congratulationsText
 {
-	font-size: 20px;
+	font-size: 2em;
 	letter-spacing: 0.025em;
 	font-weight: 700;
 }
 #ageQuestionText
 {
-	font-size: 40px;
+	font-size: 4em;
 	text-transform: uppercase;
 	letter-spacing: 0.20em;
 }
 #chooseCategoryText
 {
-	font-size: 20px;
+	font-size: 2em;
 	letter-spacing: 0.25em;
 	text-transform: uppercase;
 }
 #chosenAgeText
 {
-	font-size: 40px;
+	font-size: 4em;
 }
 #authorMadeByText
 {
-	font-size: 20px;
+	font-size: 2.8em;
 	text-transform: uppercase;
 }
 #authorPCSSText
 {
-	font-size: 50px;
+	font-size: 5em;
 }
 #triesText
 {
-	font-size: 20px;
+	font-size: 2em;
 	font-weight: 700; 
 	letter-spacing: 0.20em;
 }
 #fromText
 {
-	font-size: 20px;
+	font-size: 2em;
 	letter-spacing: 0.20em;
 }
 #factText
 {
-	font-size: 20px;
+	font-size: 2em;
 	letter-spacing: 0.20em;
 }
 #playAgainText
@@ -314,4 +315,38 @@ a:active {
 .neonOrange
 {
 	color: #FE7701;
+}
+
+/* positioning elements on page */
+#authorMadeByText
+{
+	margin: -0.3em;
+}
+#authorPCSSText
+{
+	margin: 0em;
+}
+#author
+{
+	text-align: center;
+	bottom: 4em;
+	left: 5em;
+	position: absolute;
+}
+
+/* decorative images */
+#cloudsTop
+{
+	top: 0px;	
+	right: 0px;	
+	position: absolute;
+	width: 95%;	
+}
+
+#cloudsBottom
+{
+	width: 80%;	
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
 }

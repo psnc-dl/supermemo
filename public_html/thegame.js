@@ -48,7 +48,7 @@ var main = function() {
 		
 		var image = document.createElement("img");
 		image.setAttribute("id", "card" + (i + 1).toString());
-		image.setAttribute("class", "covered");
+		image.setAttribute("class", "covered cardImg");
 		image.setAttribute("src", " ");
 		image.setAttribute("alt", "img");
 		image.setAttribute("style", "user-drag: none; -moz-user-select: none; -webkit-user-drag: none;");
