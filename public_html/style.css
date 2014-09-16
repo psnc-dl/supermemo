@@ -230,6 +230,7 @@ a:active {
 	text-transform: uppercase;
 }
 
+/* piece of text-specific styling */
 #gameTitleText
 {
 	font-size: 40px;
@@ -240,7 +241,7 @@ a:active {
 {
 	font-size: 20px;
 	letter-spacing: 0.025em;
-	font-weight: 400;
+	font-weight: 700;
 }
 #ageQuestionText
 {
