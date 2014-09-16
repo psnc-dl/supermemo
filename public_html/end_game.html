@@ -7,21 +7,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<link href="style.css" rel="stylesheet">
-		<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<link href="http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext" rel="stylesheet" type="text/css" >
-		<link href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	</head>
 	<body class="backgroundBlue">
 		<div class="container">
 			<div id="message" class="straightFont">
-				<h2>Gratulacje</h2>
-				<p>Udało Ci się znaleźć wszystkie pary w <span id="tries"></span> próbach.</p> 
-				<p>Obrazki pochodziły z publikacji: <span id="publicationName"></span></p>
-				<p id="fact"></p>
+				<h2 class="titleFont" id="congratulationsText">Gratulacje</h2>
+				<p id="triesText" class="textFont">Udało Ci się znaleźć wszystkie pary w <span id="tries"></span> próbach.</p> 
+				<p id="fromText" class="textFont">Obrazki pochodziły z publikacji: <span id="publicationName"></span></p>
+				<p id="factText" class="textFont"></p>
 			</div>
 			<div id="pubImageHolder">
 				<div id="publicationImg"><a id="piLink" href=""><img id="pi" src="" alt="img"></a></div>
-				<button type="button" id="retry" class="inkerFont" onclick="location = 'index.html'">Zagraj jeszcze raz</button>
+				<button type="button" class="inkerFont" id="playAgainText" onclick="location = 'index.html'">Zagraj jeszcze raz</button>
 			</div>   
 		</div>
 		
@@ -33,7 +30,7 @@
 			// load the number of tries that player had
 			$("#tries").text(sessionStorage.getItem("tries"));
 			// load the fact about the publication
-			$("#fact").html(fact[sessionStorage.getItem("category")]);
+			$("#factText").html(fact[sessionStorage.getItem("category")]);
 			// load the publication image
 			var bgImg = publicationImg[sessionStorage.getItem("category")];
 			$("#pi").attr("src", bgImg);

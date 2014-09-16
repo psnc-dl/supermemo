@@ -7,6 +7,9 @@
 	font-style: normal;
 }
 */
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:100,400&subset=latin,latin-ext);
 
 body {
 	width: 100%;
@@ -67,6 +70,7 @@ button {
 	left: 48.3%;
 }
 
+/*
 #retry {
 	margin-top: 10px;
 	margin-left: auto;
@@ -78,6 +82,7 @@ button {
 	border-radius: 8px;
 	color: black;
 }
+*/
 
 #gameboard {
 	position: fixed;
@@ -201,33 +206,80 @@ a:active {
 /* *************** */
 .inkerFont
 {
-	font-family: 'Marck Script', cursive;
+	font-family: 'Shadows Into Light', cursive;
 }
-
-.straightFont
+.inkerFontWide
 {
-	font-family: 'Oxygen', serif;
+	font-family: 'Shadows Into Light', cursive;
+}
+.titleFont
+{
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+}
+.textFont
+{
+	font-family: 'Inconsolata';
 	text-transform: uppercase;
 }
 
-.titleText
+#gameTitleText
+{
+	font-size: 40px;
+	letter-spacing: 0.025em;
+	font-weight: 100;
+}
+#congratulationsText
 {
 	font-size: 20px;
+	letter-spacing: 0.025em;
+	font-weight: 400;
 }
-
-.ageText
+#ageQuestionText
+{
+	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 0.20em;
+}
+#chooseCategoryText
+{
+	font-size: 20px;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+}
+#chosenAgeText
 {
 	font-size: 40px;
 }
-
-.authorMadeByText
+#authorMadeByText
 {
 	font-size: 20px;
+	text-transform: uppercase;
 }
-
-.authorPCSSText
+#authorPCSSText
 {
 	font-size: 50px;
+}
+#triesText
+{
+	font-size: 20px;
+	font-weight: 700; 
+	letter-spacing: 0.20em;
+}
+#fromText
+{
+	font-size: 20px;
+	letter-spacing: 0.20em;
+}
+#factText
+{
+	font-size: 20px;
+	letter-spacing: 0.20em;
+}
+#playAgainText
+{
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
 }
 
 /* neon colours of title text */
