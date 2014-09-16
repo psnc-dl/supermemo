@@ -31,6 +31,30 @@ button:focus
 	outline:0;
 }
 
+#authorMadeByText
+{
+	margin: -0.3em;
+}
+#authorPCSSText
+{
+	margin: 0em;
+}
+#author
+{
+	text-align: center;
+	bottom: 5em;
+	left: 6em;
+	position: absolute;
+}
+
+#chosenAgeText
+{
+	text-align: center;
+	bottom: 0.6em;
+	right: 1.5em;
+	position: absolute;
+}
+
 /* link styling */
 /* don't colour links */
 a:link
@@ -186,7 +210,7 @@ a:active
 }
 #chosenAgeText
 {
-	font-size: 4em;
+	font-size: 7em;
 }
 #authorMadeByText
 {
@@ -293,21 +317,6 @@ a:active
 }
 
 /* end_game.html */
-#authorMadeByText
-{
-	margin: -0.3em;
-}
-#authorPCSSText
-{
-	margin: 0em;
-}
-#author
-{
-	text-align: center;
-	bottom: 4em;
-	left: 5em;
-	position: absolute;
-}
 
 #playAgainText
 {
