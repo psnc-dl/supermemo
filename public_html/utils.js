@@ -7,13 +7,20 @@ var addAuthor = function() {
 	p1.setAttribute("id", "authorMadeByText");
 	p2.textContent = "PCSS";
 	p2.setAttribute("id", "authorPCSSText");
-	
+
+
 	var div = document.createElement("div");
+	div.setAttribute("class", "inkerFont");
+	div.setAttribute("id", "author");
 	div.appendChild(p1);
 	div.appendChild(p2);
-	div.setAttribute("class", "inkerFont");
+	
+	var a = document.createElement("a");
+	a.setAttribute("href", "http://www.man.poznan.pl");
+	a.setAttribute("class", "noLinkIndicator");
+	a.appendChild(div);
 
-	$('body').append(div);
+	$('body').append(a);
 };
 
 /* display previously chosen age on page */	

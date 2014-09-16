@@ -149,6 +149,7 @@ img {
 	height: 300px;
 }
 
+/* don't colour links */
 a:link {
 	color: black;
 }
@@ -163,6 +164,12 @@ a:hover {
 
 a:active {
 	color: black;
+}
+
+/* additionally to not colouring links, no underscore */ 
+.noLinkIndicator
+{
+	text-decoration: none;		
 }
 
 /* this is class for <body> element */
