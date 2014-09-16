@@ -304,6 +304,22 @@ button:link, button:visited, button:hover, button:active, button:focus
 	text-align: center;
 }
 
+#shadowRabbitPicture
+{
+	width: 20em;
+	position: absolute;
+	bottom: 16em;
+	left: 1.5em;
+}
+
+#badgePicture
+{
+	width: 10%;
+	position: absolute;
+	right: 20%;
+	top: 40%;
+}
+
 .choosingAge
 {
 	width: 100%;
