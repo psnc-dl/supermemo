@@ -17,7 +17,7 @@
 body
 {
 	width: 100%;
-	margin: 0px;
+	margin: 0em;
 	font-size: 60%;
 	color: #403F3D !important;
 }
@@ -363,15 +363,6 @@ button:link, button:visited, button:hover, button:active, button:focus
 	top: 0px;
 	width: 20%;
 	z-index: -1;
-	/*
-	width: 28%;
-	position: absolute;
-	left: 0%;
-	top: 0%;
-	margin-left: -18em;
-	margin-top: -18em;
-	clip: rect(18em,400em,400em,18em);
-	*/
 }
 
 #categoryBox
@@ -399,6 +390,17 @@ button:link, button:visited, button:hover, button:active, button:focus
 }
 
 /* the_game.html */
+#rabbitChevronEnd
+{
+	position: absolute;
+	left: 36%;
+	right: 36%;
+	height: 80%;
+	max-height: 100%;
+	top: 3.5%;
+	z-index: -1;
+}
+
 #badgePictureGame
 {
 	width: 10%;
@@ -416,6 +418,13 @@ button:link, button:visited, button:hover, button:active, button:focus
 }
 
 /* end_game.html */
+#badgePictureEnd
+{
+	width: 10%;
+	position: absolute;
+	right: 10%;
+	bottom: 12%;
+}
 
 #playAgainText
 {
@@ -440,26 +449,45 @@ button:link, button:visited, button:hover, button:active, button:focus
 
 #message
 {
+	position: absolute;
 	text-align: center;
 	width: 100%;
+	top: 20%;
+}
+			
+#congratulationsText
+{
+	position: relative;
+}
+#triesText
+{
+	position: relative;
+}
+#fromText
+{
+	position: relative;
+}
+#factText
+{
+	position: relative;
+}
+#playAgainText
+{
+	position: relative;
 }
 
-#pubImageHolder
+#pubImage
 {
-	width: 400px;
-	margin: 10px;
-	float: right;
+	width: 20%;
+	position: absolute;
+	top: 70%;
+	right: 10%;
+	width: 200px;
+	height: 200px;
 }
-
-#publicationImg
+#pubImage img
 {
-	width: 300px;
-	height: 300px;
-}
-
-#publicationImg img
-{
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height: 200px;
 }
 

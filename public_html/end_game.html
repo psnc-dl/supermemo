@@ -9,17 +9,21 @@
 		<link href="style.css" rel="stylesheet">
 	</head>
 	<body class="backgroundBlue">
-		<div class="container">
-			<div id="message" class="straightFont">
-				<h2 class="titleFont" id="congratulationsText">Gratulacje</h2>
-				<p id="triesText" class="textFont">Udało Ci się znaleźć wszystkie pary w <span id="tries"></span> próbach.</p> 
-				<p id="fromText" class="textFont">Obrazki pochodziły z publikacji: <span id="publicationName"></span></p>
-				<p id="factText" class="textFont"></p>
-				<div id="playAgainText" onclick="location = 'index.html'">Zagraj jeszcze raz</div>
-			</div>
-			<div id="pubImageHolder">
-				<div id="publicationImg"><a id="piLink" href=""><img id="pi" src="" alt="img"></a></div>
-			</div>   
+		<div id="message">
+			<h2 id="congratulationsText">Gratulacje</h2>
+			<p id="triesText">Udało Ci się znaleźć wszystkie pary w <span id="tries"></span> próbach.</p> 
+			<p id="fromText">Obrazki pochodziły z publikacji: <span id="publicationName"></span></p>
+			<p id="factText"></p>
+			<div id="playAgainText" onclick="location = 'index.html'">Zagraj jeszcze raz</div>
+		</div>
+		<div id="pubImage">
+			<a id="piLink" href=""><img id="pi" src="" alt="img"></a>
+		</div>   
+		<div> 
+			<img id="rabbitChevronEnd" src="images/rabbitChevronDown.png"/>
+		</div>
+		<div>
+			<img id="badgePictureEnd" src="images/badge.png"/>
 		</div>
 		<div>
 			<img id="cloudsTop" src="images/cloudsTop.png"/>
