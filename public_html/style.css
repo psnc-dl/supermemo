@@ -399,6 +399,15 @@ button:link, button:visited, button:hover, button:active, button:focus
 }
 
 /* the_game.html */
+#badgePictureGame
+{
+	width: 10%;
+	position: absolute;
+	right: 12%;
+	top: 0%;
+	margin-top: -6.5em;
+	clip: rect(6.5em,400em,400em,0em);
+}
 #scores
 {
 	position: fixed;
