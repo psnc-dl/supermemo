@@ -312,7 +312,7 @@ button:link, button:visited, button:hover, button:active, button:focus
 	left: 1.5em;
 }
 
-#badgePicture
+#badgePictureIndex
 {
 	width: 10%;
 	position: absolute;
@@ -349,6 +349,31 @@ button:link, button:visited, button:hover, button:active, button:focus
 }
 
 /* category.html */
+#badgePictureCategory
+{
+	width: 10%;
+	position: absolute;
+	right: 11%;
+	top: 50%;
+}
+#rabbitChevronCategory
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 20%;
+	z-index: -1;
+	/*
+	width: 28%;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	margin-left: -18em;
+	margin-top: -18em;
+	clip: rect(18em,400em,400em,18em);
+	*/
+}
+
 #categoryBox
 {
 	width: 100%;
