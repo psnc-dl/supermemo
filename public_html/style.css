@@ -136,24 +136,32 @@ button:link, button:visited, button:hover, button:active, button:focus
 .card
 {
 	position: relative;
-	background-color: #7FB1B0;
-	border-radius: 8px;
-	margin: 5px;
 	float: left;
+	margin-right: 5px;
+	background-image: url('images/cardBack.png');
+	background-size: 100% 100%;
 }
 
 .cardImg
 {
-	border-radius: 8px;
+	border-radius: 10px;
 	display: block;
 	position: absolute;
-	width: 100%;
-	height: 100%;	
+	width: 94%;
+	height: 94%;	
 }
 
 .covered
 {
 	opacity: 0;
+}
+
+.uncovered
+{
+	opacity: 1;
+	width: 94%;
+	height: 94%;	
+	border-radius: 10px;
 }
 
 

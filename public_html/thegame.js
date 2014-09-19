@@ -37,7 +37,7 @@ var main = function() {
 	/* These two lines set the game board width and height and the placement of 
 	 * the tries counter depending on the config.js file.*/
 	$("#gameboard").css({"width": boardWidth * (cardDim + 10), "height": boardHeight * (cardDim + 10), "margin-top": -(boardHeight * (cardDim + 10))/2, "margin-left": -(boardWidth * (cardDim + 10))/2});
-	$("#scores").css({"margin-left": (30 + (boardWidth * (cardDim + 10))/2)});
+	$("#scores").css({"margin-left": (-25 + (boardWidth * (cardDim + 10))/2)});
 	
 	/* This function is used to dynamically create the html elements containing 
 	 * images from the images array. Each picture gets a unique id. */
@@ -75,7 +75,7 @@ var main = function() {
 	/* This function handles the click on card event. It uses a temporary array 
 	 * matchCard to store the id's of the 2 selected cards before compareing them. */
 	var cardClick = function() {
-		$(".card").click(function(event) {
+		$(".cardImg").click(function(event) {
 			/* This loop fixes the bug in which the player could uncover all of 
 			 * the cards and block the game */ 
 			var matchId = event.target.id;
