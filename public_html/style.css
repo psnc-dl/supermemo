@@ -512,24 +512,29 @@ button:link, button:visited, button:hover, button:active, button:focus
 {
 	padding-top: 0.2em;
 	position: relative;
+	z-index: 1000;
 }
 #triesText
 {
 	padding-top: 0.2em;
 	position: relative;
+	z-index: 1000;
 }
 #fromText
 {
 	position: relative;
+	z-index: 1000;
 }
 #factText
 {
 	position: relative;
+	z-index: 1000;
 }
 #playAgainText
 {
 	padding-top: 2em;
 	position: relative;
+	z-index: 1000;
 }
 
 #pubImage
