@@ -356,8 +356,8 @@ button:link, button:visited, button:hover, button:active, button:focus
 {
 	width: 10%;
 	position: absolute;
-	right: 11%;
-	top: 50%;
+	right: 8%;
+	top: 10%;
 }
 #rabbitChevronCategory
 {
@@ -372,32 +372,39 @@ button:link, button:visited, button:hover, button:active, button:focus
 {
 	width: 100%;
 	position: absolute;
-	/*bottom: 35%; */
 	text-align: center;
 }
 #categoryOptions
 {
-	display: block;
+	display: inline-block;
 }
 .categoryContainer
 {
 	float: left;
-	width: 200px;
-	margin-left: 10px;
-	margin-right: 10px;
+	width: 190px;
+	margin-left: 0px;
+	margin-right: 0px;
+	z-index: 10;
 }
 
 .categoryBgImg
 {
 	position: relative;
-	width: 320px;	
-	bottom: 10px;
-	z-index: -1;
+	width: 190px;	
+	z-index: 11;
 }
 
-.categoryOption
+.categoryOptionBtn
 {
-	border-radius: 8px;
+	position: relative;
+	top: -174px;
+	margin-left: -19px;
+	border-radius: 10px;
+	border-style: none;
+	width: 146px;
+	height: 146px;
+	z-index: 100;
+	background-size: 100% 100%;
 }
 
 #chooseCategoryText
