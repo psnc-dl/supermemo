@@ -36,8 +36,8 @@ body
 #author
 {
 	text-align: center;
-	bottom: 5em;
-	left: 6em;
+	bottom: 2em;
+	left: 3em;
 	position: absolute;
 	z-index: 500;
 }
@@ -45,8 +45,8 @@ body
 #chosenAgeText
 {
 	text-align: center;
-	bottom: 0.6em;
-	right: 1.5em;
+	bottom: 0.3em;
+	right: 0.5em;
 	position: absolute;
 }
 
@@ -319,8 +319,8 @@ button:link, button:visited, button:hover, button:active, button:focus
 {
 	width: 10em;
 	position: absolute;
-	bottom: 17.5em;
-	left: 6.1em;
+	bottom: 14.5em;
+	left: 3.1em;
 }
 
 #badgePictureIndex
