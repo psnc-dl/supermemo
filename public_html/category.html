@@ -28,16 +28,29 @@
 			/* This function creates category buttons depending on the config.js 
 			 * file and the age category selected on the previous page.*/
 			var buttonCreator = function(id) {
+
+				var catImgPath = categoryImg[id];
+				var catBgImgPath = categoryBg[id];
+
+				var categoryContainer = document.createElement("div");
+				categoryContainer.setAttribute("class", "categoryContainer");
+				
+				var catBgImg = document.createElement("img");
+				catBgImg.setAttribute("class", "categoryBgImg");	
+				catBgImg.setAttribute("src", catBgImgPath);	
+
 				var btn = document.createElement("button");
-				var bgImg = categoryBg[id];
 				btn.setAttribute("type", "button");
 				btn.setAttribute("class", "categoryOption");
 				btn.setAttribute("id", id);
 				/* This onclick event passes the category parameter to the session 
 				 * storage so it can be accessed on further pages. */
 				btn.setAttribute("onclick", "sessionStorage.setItem('category', id); location = 'the_game.html';");				
-				document.getElementById("categoryOptions").appendChild(btn);
-				$(btn).css('background-image', 'url(' + bgImg + ')');
+				$(btn).css('background-image', 'url(' + catImgPath + ')');
+				
+				categoryContainer.appendChild(catBgImg);
+				categoryContainer.appendChild(btn);
+				document.getElementById("categoryOptions").appendChild(categoryContainer);
 			};
 			// obtain the array containing the categories list for each of the age categories
 			var categories = ageCategories[sessionStorage.getItem("age")];

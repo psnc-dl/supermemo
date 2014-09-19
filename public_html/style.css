@@ -372,24 +372,37 @@ button:link, button:visited, button:hover, button:active, button:focus
 {
 	width: 100%;
 	position: absolute;
-	bottom: 35%;
+	/*bottom: 35%; */
 	text-align: center;
 }
 #categoryOptions
 {
 	display: block;
 }
+.categoryContainer
+{
+	float: left;
+	width: 200px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.categoryBgImg
+{
+	position: relative;
+	width: 320px;	
+	bottom: 10px;
+	z-index: -1;
+}
 
 .categoryOption
 {
-	margin: 30px 10px 10px 10px;
-	width: 155px;
-	height: 155px;
-	background-color: #7FB1B0;
-	border: 0px;
 	border-radius: 8px;
-	padding: 0px;
-	color: black;
+}
+
+#chooseCategoryText
+{
+	clear: both;
 }
 
 /* the_game.html */

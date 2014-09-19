@@ -226,10 +226,10 @@ var category = {
 		]
 	}
 };
-/* In the categoryBg object you can set the background image that will be used 
+/* In the categoryImg object you can set the image that will be used 
  * for the category buttons. The name of the string must be the same as the 
- * category it corresponds to, it should contain the path to the background image. */
-var categoryBg = {
+ * category it corresponds to, it should contain the path to the image. */
+var categoryImg = {
 	"Inicjały":  "cards/inicjaly/a.jpg",
 	"Atlas":     "cards/atlas/atlas-009.png",
 	"Mody":      "cards/mody/01.png",
@@ -237,6 +237,16 @@ var categoryBg = {
 	"Zioła":     "cards/ziola/ziola-018.png",
 	"Motyle":    "cards/motyle/motyle-046.png"
 };
+/* In the categoryBg object you can set the background image for category buttons. */
+var categoryBg = {
+	"Inicjały":  "images/hanging01.png",
+	"Motyle":    "images/hanging01.png",
+	"Atlas":     "images/hanging02.png",
+	"Mody":      "images/hanging03.png",
+	"Ssaki":     "images/hanging04.png",
+	"Zioła":     "images/hanging05.png"
+};
+
 /* In the publicationImg object you can set the image of the publication that will 
  * be displayed on the final page of the game. The name of the string must be 
  * the same as the category it corresponds to, it should contain the path to the 
