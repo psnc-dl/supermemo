@@ -12,15 +12,16 @@ var addAuthor = function() {
 	var div = document.createElement("div");
 	div.setAttribute("class", "inkerFont");
 	div.setAttribute("id", "author");
-	div.appendChild(p1);
-	div.appendChild(p2);
 	
 	var a = document.createElement("a");
 	a.setAttribute("href", "http://www.man.poznan.pl");
 	a.setAttribute("class", "noLinkIndicator");
-	a.appendChild(div);
+	a.appendChild(p2);
 
-	$('body').append(a);
+	div.appendChild(p1);
+	div.appendChild(a);
+
+	$('body').append(div);
 };
 
 /* display previously chosen age on page */	
