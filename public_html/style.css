@@ -409,6 +409,8 @@ button:link, button:visited, button:hover, button:active, button:focus
 
 #chooseCategoryText
 {
+	position: relative;
+	top: -130px;
 	clear: both;
 }
 
