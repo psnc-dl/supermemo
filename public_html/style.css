@@ -439,21 +439,13 @@ button:link, button:visited, button:hover, button:active, button:focus
 	padding-bottom: 0.5em;
 }
 
-#cloudTopOver
+#cloudsTopOver
 {
 	top: 0px;	
 	right: 0px;	
 	position: absolute;
 	width: 95%;	
 	z-index: 30;
-}
-#cloudTopUnder
-{
-	top: 0px;	
-	right: 0px;	
-	position: absolute;
-	width: 95%;	
-	z-index: 10;
 }
 
 #cloudsBottom
