@@ -120,7 +120,9 @@ button:link, button:visited, button:hover, button:active, button:focus
 
 .backgroundBlue
 {
-	background-image: url('images/backgroundBlue.png');
+	/* background-image: url('images/backgroundBlue.png'); */
+	/* background-color: #598094; */
+	background-color: #9DB6CA;
 }
 
 
