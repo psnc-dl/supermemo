@@ -558,52 +558,15 @@ button:link, button:visited, button:hover, button:active, button:focus
 	background-position: center center;
 	background-repeat: no-repeat;
 	border: none;
+	cursor: pointer;
 }
-
-#playAgainBox
+#playAgainButton:active
 {
-	min-height: 10px;
-	width: 100%;
-	margin-top: 3%;
-	position: relative;
-	z-index: 1000;
-	text-align: center;
-	text-decoration: none;
-}
-#plainAgainDiv
-{
-	height: 100px;
-	width: 100px;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-
-	display: none;
-	position: relative;
-	z-index: 1200;
-}
-#playAgainLink:hover div
-{
-	position: relative;
-	/* background-image: url('images/horizontalMarking.png'); */
-	background-image: url('images/cardBack.png');
-	display: block;
-	z-index: 1200;
-}
-
-
-
-#playAgainText
-{
-	margin-top: 0;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	/* this is for button text not to jump */
+	/* to right in FF */
+	/* to up in Chrome */
+	/* not sure if this is good thing remove this effect */
+	padding: 0px !important;
 }
 
 #pubImage
