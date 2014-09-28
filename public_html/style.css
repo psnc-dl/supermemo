@@ -262,7 +262,7 @@ button:link, button:visited, button:hover, button:active, button:focus
 	letter-spacing: 0.20em;
 	font-weight: 700; 
 }
-#playAgainText
+#playAgainButton
 {
 	font-family: 'Shadows Into Light', cursive;
 
@@ -512,7 +512,10 @@ button:link, button:visited, button:hover, button:active, button:focus
 {
 	position: absolute;
 	text-align: center;
-	width: 100%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 	top: 18%;
 }
 			
@@ -538,11 +541,69 @@ button:link, button:visited, button:hover, button:active, button:focus
 	position: relative;
 	z-index: 1000;
 }
-#playAgainText
+
+#playAgainButton
 {
-	padding-top: 2em;
+	position: relative;
+	width: 30%;
+	min-height: 5em;
+	z-index: 1000;
+	background: none;
+	outline: none;
+	border: none;
+}
+#playAgainButton:hover
+{
+	background-image: url('images/horizontalMarking.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+#playAgainBox
+{
+	min-height: 10px;
+	width: 100%;
+	margin-top: 3%;
 	position: relative;
 	z-index: 1000;
+	text-align: center;
+	text-decoration: none;
+}
+#plainAgainDiv
+{
+	height: 100px;
+	width: 100px;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	display: none;
+	position: relative;
+	z-index: 1200;
+}
+#playAgainLink:hover div
+{
+	position: relative;
+	/* background-image: url('images/horizontalMarking.png'); */
+	background-image: url('images/cardBack.png');
+	display: block;
+	z-index: 1200;
+}
+
+
+
+#playAgainText
+{
+	margin-top: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 #pubImage
