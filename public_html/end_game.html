@@ -19,9 +19,6 @@
 			<p id="factText"></p>
 			<button id='playAgainButton' onclick="location='index.html'">Zagraj jeszcze raz</button>
 		</div>
-		<div id="pubImage">
-			<a id="piLink" href=""><img id="pi" src="" alt="img"></a>
-		</div>   
 		<div id="rabbitContainer"> 
 			<img id="rabbitChevronEnd" src="images/rabbitChevronDown.png"/>
 		</div>
@@ -31,8 +28,9 @@
 		<div>
 			<img id="cloudsTopOver" src="images/cloudsTop.png"/>
 		</div>
-		<div>
+		<div id="publicationImgBox">
 			<img id="hangingEnd" src="images/hanging.png"/>
+			<a id="publicationLink" href=""><img id="publicationImg" mouseover='' src="" alt="img"></a>
 		</div>
 		<div>
 			<img id="cloudsBottom" src="images/cloudsBottom.png"/>
@@ -49,9 +47,9 @@
 			$("#factText").html(fact[sessionStorage.getItem("category")]);
 			// load the publication image
 			var bgImg = publicationImg[sessionStorage.getItem("category")];
-			$("#pi").attr("src", bgImg);
+			$("#publicationImg").attr("src", bgImg);
 			// make image a link
-			$("#piLink").attr("href", imgLink[sessionStorage.getItem("category")]);
+			$("#publicationLink").attr("href", imgLink[sessionStorage.getItem("category")]);
 			// clear the session storage 
 			// (just to ensure it will not interfere with the next game)
 			// - probably not needed now

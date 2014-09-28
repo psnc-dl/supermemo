@@ -506,14 +506,31 @@ button:link, button:visited, button:hover, button:active, button:focus
 	z-index: 30;
 }
 
-#hangingEnd
+#publicationImgBox
 {
-	width: 320px;	
-	right: 35px;
-	bottom: 25px;
+	right: 330px;
+	bottom: 20px;
 	position: absolute;
 	z-index: 20;
 	/* clip: rect(300px,1000px,1000px,0px); */
+}
+#hangingEnd
+{
+	width: 320px;	
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 24;
+}
+#publicationImg
+{
+	width: 185px;	
+	height: 185px;	
+	position: absolute;
+	left: 71px;
+	bottom: 34px;
+	z-index: 25;
+	border-radius: 10px;
 }
 
 #message
@@ -577,21 +594,4 @@ button:link, button:visited, button:hover, button:active, button:focus
 	padding: 0px !important;
 }
 
-#pubImage
-{
-	width: 185px;	
-	height: 185px;	
-	position: absolute;
-	top: ;
-	right: 99px;
-	bottom: 59px;
-	z-index: 25;
-}
-#pubImage img
-{
-	width: 185px;	
-	height: 185px;	
-	border-radius: 10px;
-	z-index: 25;
-}
 
