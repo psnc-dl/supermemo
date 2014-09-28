@@ -387,6 +387,7 @@ button:link, button:visited, button:hover, button:active, button:focus
 {
 	width: 100%;
 	position: absolute;
+	top: -10px;
 	text-align: center;
 }
 #categoryOptions
@@ -400,6 +401,12 @@ button:link, button:visited, button:hover, button:active, button:focus
 	margin-left: 0px;
 	margin-right: 0px;
 	z-index: 10;
+}
+.categoryContainer:hover
+{
+	-webkit-transform: translate(0px, 10px);
+	-ms-transform: translate(0px, 10px);
+	transform: translate(0px, 10px);
 }
 
 .categoryBgImg
@@ -420,6 +427,7 @@ button:link, button:visited, button:hover, button:active, button:focus
 	height: 146px;
 	z-index: 100;
 	background-size: 100% 100%;
+	cursor: pointer;
 }
 
 #chooseCategoryText
