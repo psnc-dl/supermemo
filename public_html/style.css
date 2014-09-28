@@ -350,6 +350,14 @@ button:link, button:visited, button:hover, button:active, button:focus
 	border: 0px;
 	background: none;
 }
+.ageOption:hover
+{
+	background-image: url('images/marking.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+}
 #ageQuestionText
 {
 	width: 14%;
