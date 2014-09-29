@@ -353,6 +353,7 @@ button:link, button:visited, button:hover, button:active, button:focus
 .ageOption:hover
 {
 	background-image: url('images/marking.png');
+	background-size: 90% 80%;
 	background-position: center center;
 	background-repeat: no-repeat;
 	border: none;
@@ -588,6 +589,7 @@ button:link, button:visited, button:hover, button:active, button:focus
 #playAgainButton:hover
 {
 	background-image: url('images/horizontalMarking.png');
+	background-size: 90% 80%;
 	background-position: center center;
 	background-repeat: no-repeat;
 	border: none;
